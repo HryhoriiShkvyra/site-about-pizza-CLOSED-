@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+body {
+    background-color: rgb(53, 42, 59);
+    color: white;
+    line-height: 1.7;
+}
+
+a {
+    cursor: pointer;
+}
+
+/*----------------- general styles -----------------*/
+
+/* .container {
+    display: flex;
+    justify-content: center;
+} */
+
+
+

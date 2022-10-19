@@ -1,0 +1,28 @@
+.news {
+
+    width: 75rem;
+    height: 40rem;
+    justify-content: center;
+    /* border: 2px solid teal; */
+    margin: 4rem 0 0 22rem
+}
+
+.newsDescription{
+
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.body {
+    font-size: 1.2rem;
+}
+
+.image {
+    position: absolute;
+    width: 75rem;
+    height: 40rem;
+    margin-top: -5.1rem;
+    z-index: -1;
+}
