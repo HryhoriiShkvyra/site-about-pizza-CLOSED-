@@ -1,6 +1,6 @@
 import React from "react";
 import classes from './News.module.css'
-import Pineapple from '../../Assets/pizza/Pineapple on pizza.jpg'
+import Pineapple from '../../../Assets/pizza/Pineapple on pizza.jpg'
 
 
 

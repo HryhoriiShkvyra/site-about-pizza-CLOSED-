@@ -1,7 +1,8 @@
 import React from 'react'
 import './Components/styles/Index.css'
 import Header from './Components/header/Header';
-import News from './Components/news/News';
+import News from './Components/Pages/news/News';
+import ProductList from './Components/Pages/Cards/Card';
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <Header/>
       <News/>
+      <ProductList/>
     </div>
   );
 }

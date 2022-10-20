@@ -1,0 +1,50 @@
+.cardInner {
+    width: 80%;
+    display: flex;
+    flex: 1 1 0;
+    gap: 2rem;
+    margin: 5rem auto;
+    /* border: 1px solid teal; */
+
+}
+
+.card {
+    width: 19.4rem;
+    padding: 0.5rem;
+    border: 1px solid grey;
+    border-radius: 1rem;
+}
+
+.cardImage {
+    width: 293px;
+    height: 179px;
+    aspect-ratio: 16/9;
+    border-radius: 1rem;
+}
+
+.cardTitle {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.cardDescription{
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.ReplaceIngredients {
+    font-size: 0.8rem;
+    border-bottom: 1px solid #000;
+}
+
+.productButtons {
+    display: flex;
+    flex: 1 1 0;
+    gap: 0.5rem;
+    margin: 0.5rem auto;
+    padding: 0.5rem auto;
+    border: 1px solid #333;
+    border-radius: 1rem;
+
+    justify-content: center;
+}
