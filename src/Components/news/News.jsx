@@ -40,24 +40,24 @@ const News = () => {
     ]
 
     return(
-        <div
-            modules={[Pagination]}
+        <Swiper className="container"
+            modules={[Pagination]}  
             spaceBetween={40}
             slidesPerView={1}
             pagination={{ clickable: true }}
-        >
+            >
             {data.map(({id, title, body, image}) => {
                 return(
-                    <div className={classes.news} key={id}>
+                    <SwiperSlide className={classes.news} key={id}>
+                        <img className={classes.image} src={Pineapple}/>
                         <div className={classes.newsDescription}>
                             <div className={classes.title}>{title}</div>
                             <div className={classes.description}>{body}</div>
                         </div>
-                        <img className={classes.image} src={Pineapple}/>
-                    </div>
+                    </SwiperSlide>
                 )
             })}
-        </div>
+        </Swiper>
     );
 };
 

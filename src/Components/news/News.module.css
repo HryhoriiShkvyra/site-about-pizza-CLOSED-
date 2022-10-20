@@ -1,14 +1,19 @@
 .news {
 
-    width: 75rem;
-    height: 40rem;
-    justify-content: center;
-    /* border: 2px solid teal; */
-    margin: 4rem 0 0 22rem
+    width: 70%;
+    margin: 5rem auto;
+    position: relative;
+    text-align: center;
 }
 
 .newsDescription{
-
+    position: absolute;
+    top: 75%;
+    left: 20%;
+    padding: 2rem 5rem;
+    background-color: rgba(0, 0, 0, 0.533);
+    border-radius: 2rem;
+    color: rgb(231, 231, 231);
 }
 
 .title {
@@ -20,9 +25,11 @@
 }
 
 .image {
-    position: absolute;
-    width: 75rem;
-    height: 40rem;
-    margin-top: -5.1rem;
-    z-index: -1;
+    width: 70%;
+    aspect-ratio: 16/9;
+    border-radius: 2rem;
 }
+
+
+
+
