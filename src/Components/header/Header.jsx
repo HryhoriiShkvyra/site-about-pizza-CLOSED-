@@ -5,7 +5,7 @@ import classes from './Header.module.css'
 const Header = () => {
     return(
         <div className={classes.header}>
-            <logo className={classes.logo}>logo</logo>
+            <div className={classes.logo}>logo</div>
             <nav className={classes.nav}>
                 <a>Pizza</a>
                 <a>Bar</a>
@@ -14,10 +14,10 @@ const Header = () => {
                 <a>Charity</a>
             </nav>
             <div className={classes.cart}>
-                <i class="fa-solid fa-cart-shopping"></i>
+                <i className="fa-solid fa-cart-shopping"></i>
             </div>
             <div className={classes.bar}>
-                <i class="fa-solid fa-bars"></i>
+                <i className="fa-solid fa-bars"></i>
             </div>
         </div>
     );

@@ -23,6 +23,7 @@ body {
     background-color: rgb(235, 235, 235);
     color: black;
     line-height: 1.7;
+    cursor: default;
 }
 
 a {
@@ -33,6 +34,14 @@ a {
 
 .container {
     margin: 0 auto;
+}
+
+
+.active {
+    display: block;
+    background: #333;
+    color: white;
+    border-radius: 1rem;
 }
 
 
