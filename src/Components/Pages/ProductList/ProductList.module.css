@@ -1,0 +1,12 @@
+.productListTitle {
+    text-align: center;
+    margin-top: 2rem;    
+}
+
+
+
+.containerProductList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+}

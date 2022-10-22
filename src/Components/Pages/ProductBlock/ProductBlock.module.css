@@ -1,14 +1,12 @@
-.cardInner {
+.productBlockInner {
     width: 80%;
     display: flex;
     flex: 1 1 0;
-    gap: 2rem;
-    margin: 5rem auto;
     /* border: 1px solid teal; */
 
 }
 
-.card {
+.productBlock {
     width: 19.4rem;
     padding: 0.5rem;
     border: 1px solid grey;
@@ -17,37 +15,37 @@
 
 }
 
-.card:hover {
+.productBlock:hover {
     -webkit-box-shadow: 0px 0px 50px 8px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 50px 8px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 50px 8px rgba(0,0,0,0.75);
     transition: 600ms all;
 }
 
-.cardImage {
+.productImage {
     width: 293px;
     height: 179px;
     aspect-ratio: 16/9;
     border-radius: 1rem;
 }
 
-.cardTitle {
+.productTitle {
     padding: 0.5rem;
     font-size: 1.2rem;
 }
 
-.cardDescription{
+.productToppings{
     padding: 0.5rem;
     font-size: 0.9rem;
 }
 
-.ReplaceIngredients {
+.productReplaceableProd {
     font-size: 0.8rem;
     border-bottom: 1px solid #000;
 }
 
 
-.productButtons {
+.productBlockDetailsColX{
     display: flex;
     flex: 1 1 0;
     margin: 0.5rem auto;
@@ -59,7 +57,25 @@
     justify-content: center;
 }
 
+.productBlockDetailsColY {
+    margin-top: 1rem;
+}
+
+.productBlockToggle__FlavorBlock {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+
+#productBtnFlavour {
+    width: 2rem;
+    background: #333;
+}
+
 div button {
     background-color: rgba(255, 255, 255, 0);
     padding: 0 0.66rem;
-    }
+}
+
+
+
