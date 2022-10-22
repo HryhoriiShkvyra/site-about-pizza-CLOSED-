@@ -78,4 +78,30 @@ div button {
 }
 
 
+.productBlockPriceRow {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 1rem 0.5rem 1rem;
+    gap: 4.5rem;
+    font-weight: 700;
+}
 
+.productBlockPriceBlock {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 1rem;
+
+}
+
+.productPrice {
+
+}
+
+
+.productBlockWrap {
+    padding: 1rem 2.5rem;
+    background-color: rgb(252, 85, 85);
+    border-radius: 1rem;
+
+}

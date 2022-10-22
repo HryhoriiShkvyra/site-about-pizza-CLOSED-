@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Header/>
       <News/>
-      <ProductList/>
+      <ProductList title={'Best Price'}/>
     </div>
   );
 }

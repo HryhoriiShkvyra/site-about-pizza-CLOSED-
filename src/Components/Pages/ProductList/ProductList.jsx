@@ -4,10 +4,13 @@ import classes from './ProductList.module.css'
 
 
 
-const ProductList = () => {
+const ProductList = (props) => {
     return(
         <div>
-           <div className={classes.productListTitle}>Title of list</div>
+           <div className={classes.productListTitle}>
+                <div>{props.title}</div>
+                <div className={classes.productListTitleInfo}>infoAboutList</div>
+           </div>
            <div className={classes.containerProductList}>
                 <ProductBlock/>
                 <ProductBlock/>

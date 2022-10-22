@@ -33,7 +33,13 @@ const ProductBlock = () => {
                                 <button id="productBtn" onClick={() => setActiveBtnY('#hot-dog')} className={activeBtnY === '#hot-dog' ? 'active' : ''}>Hot-Dog crust</button>
                             </div>
                         </div>
-                        
+                        <div className={classes.productBlockPriceRow}>
+                            <div className={classes.productBlockPriceBlock}>
+                                <div className={classes.productPrice}>999</div>
+                                <div>uah</div>
+                            </div>
+                            <div className={classes.productBlockWrap}>To cart</div>
+                        </div>
                     </div>
                 </div>
             </div>
