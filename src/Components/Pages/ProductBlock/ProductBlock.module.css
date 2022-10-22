@@ -9,6 +9,7 @@
 .productBlock {
     width: 19.4rem;
     padding: 0.5rem;
+    background-color: white;
     border: 1px solid grey;
     border-radius: 1rem;
     transition: 600ms all;
@@ -82,7 +83,7 @@ div button {
     display: flex;
     justify-content: center;
     margin: 1.5rem 1rem 0.5rem 1rem;
-    gap: 4.5rem;
+    gap: 4rem;
     font-weight: 700;
 }
 

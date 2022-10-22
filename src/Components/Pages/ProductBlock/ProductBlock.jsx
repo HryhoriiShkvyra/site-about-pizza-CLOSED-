@@ -38,7 +38,7 @@ const ProductBlock = () => {
                                 <div className={classes.productPrice}>999</div>
                                 <div>uah</div>
                             </div>
-                            <div className={classes.productBlockWrap}>To cart</div>
+                            <button className={classes.productBlockWrap}>To cart</button>
                         </div>
                     </div>
                 </div>

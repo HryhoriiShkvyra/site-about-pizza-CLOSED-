@@ -9,7 +9,9 @@ const ProductList = (props) => {
         <div>
            <div className={classes.productListTitle}>
                 <div>{props.title}</div>
-                <div className={classes.productListTitleInfo}>infoAboutList</div>
+                <div className={classes.productListTitleInfo}>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                </div>
            </div>
            <div className={classes.containerProductList}>
                 <ProductBlock/>
