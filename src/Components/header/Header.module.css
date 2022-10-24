@@ -1,7 +1,7 @@
-.header {
+.fakeHeader {
     width: 100%;
     background-color: #666;
-    height: 3.5rem;
+    height: 3.1rem;
 }
 
 .container {
@@ -9,10 +9,10 @@
     width: 70%;
 }
 
-.fakeHeader {
+.fakeHeaderInner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding-top: 0.9rem;
+    padding-top: 0.7rem;
 }
 
 .call,
@@ -23,79 +23,162 @@
     
 }
 
-
+/* I do not know why this "hover" not work */
+.call:hover {
+    color: #999;
+}
 
 .phone {
     font-size: 1.3rem;
     height: 24px;
     margin-top: -0.3rem;
+    color: #222;
 }
 
 .number {
     font-weight: 700;
     font-size: 1.3rem;
     margin-top: -0.3rem;
+    color: rgb(186, 186, 186);
+}
 
+/* I do not know why this "hover" not work */
+.location:hover {
+    color: white;
 }
 
 .point {
     font-size: 1.3rem;
+    margin-top: -0.3rem;
+    color: rgb(154, 153, 153);
 }
 
 .city {
     font-size: 1.3rem;
     height: 1.4rem;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid rgb(154, 153, 153);
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(154, 153, 153);
+
 }
 
 
 
 .select {
-    width: 8rem;
+    width: 9rem;
+    height: 1.8rem;
     border: 1px solid #333;
     border-radius: 1rem;
     text-align: center;
+    color: white;
+    font-weight: 700
+
+}
+
+.select:hover {
+    background-color: #333;
 }
 
 .login {
-    width: 8rem;
+    width: 9rem;
+    height: 1.8rem;
+    padding-top: 0.1rem;
     background-color: #999;
     border-radius: 1rem;
     text-align: center;
+    font-size: 0.9rem;
+    font-weight: 700
 }
 
-/* 
-.header {
+.login:hover{
+    background-color: white;
+}
+
+.menu {
+
+}
+
+/*---------------------- MAIN HEADER --------------------------*/
+
+.mainHeader {
     width: 100%;
-    height: 8rem;
-    display: flex;
-    justify-content: center;
-    padding-top: 2.6rem;
+    background-color: rgb(39, 39, 39);
+    color: white;
+}
 
-    font-size: 1.3rem;
 
-    background-color: rgba(0, 0, 0, 0.2);
+.mainHeaderInner {
+    display: grid;
+    grid-template-columns: 29% 45% 22% 4%;
+    height: 4.4rem;
+    padding-top: 1rem;
 }
 
 .logo {
-    position: absolute;
-    left: 8rem;
+    font-size: 1.5rem;
 }
 
 .nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    font-size: 1.2rem;
+
+    margin-top: 0.3rem  ;
+}
+
+.navBtn:hover {
+    font-weight: 700;
+}
+
+
+.checkoutField {
     display: flex;
-    justify-content: center;
-    gap: 5rem;
+    gap: 0.1rem;
+    width: 12rem;
+    height: 3.1rem;
+    margin: -0.3rem 1rem    ;
 
+    background-color: rgb(220, 220, 220);
+
+    border-radius: 2rem;
+}
+
+.cartBtn {
+    width: 2.8rem;
+    height: 2.8rem;
+    padding: 0.5rem;
+    margin: 0.15rem 0 0 0.2rem;
+    background-color: #333;
+    border-radius: 2.5rem;
+
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.cartBtn:hover {
+    background-color: #111;
+}
+
+.checkoutBtn {
+    width: 8.8rem;
+    height: 2.8rem;
+    border-radius: 2rem;
+    color: white;
+
+    background-color: rgb(229, 18, 18);
+    margin-top: 0.15rem;
+    font-weight: 700;
+}
+
+.menu {
+    margin: 0.4rem 0 0 1rem;
 }
 
 
-.cart {
-    position: absolute;
-    right: 10rem;
-}
 
-.bar {
-    position: absolute;
-    right: 6rem;
-} */
+
+
+
+

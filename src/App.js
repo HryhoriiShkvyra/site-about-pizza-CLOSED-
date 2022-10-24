@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      {/* <News/>
+      <News/>
       <ProductList title={'Best Price'}/>
       <div style={{
         textAlign: 'center', 
@@ -20,7 +20,7 @@ function App() {
         }}>
         * weight of just cooked product. The weight in delivery orders may differ due to dehydration of the product.
       </div>
-      <Footer/> */}
+      <Footer/>
     </div>
   );
 }
