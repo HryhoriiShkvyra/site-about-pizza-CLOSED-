@@ -16,11 +16,11 @@ const ProductList = (props) => {
            <div className={classes.containerProductList}>
                 <ProductBlock/>
                 <ProductBlock/>
+                {/* <ProductBlock/>
                 <ProductBlock/>
                 <ProductBlock/>
                 <ProductBlock/>
-                <ProductBlock/>
-                <ProductBlock/>
+                <ProductBlock/> */}
            </div>
             
         </div>

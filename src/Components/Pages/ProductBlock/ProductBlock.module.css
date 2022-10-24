@@ -1,17 +1,14 @@
 .productBlockInner {
-    width: 80%;
-    display: flex;
-    flex: 1 1 0;
-    /* border: 1px solid teal; */
-
+    width: 19.7rem;
+    height: 30.12rem;
+    padding: 0.63rem;
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 1.5rem;
 }
 
 .productBlock {
-    width: 19.4rem;
-    padding: 0.5rem;
     background-color: white;
-    border: 1px solid grey;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     transition: 600ms all;
 
 }
@@ -24,26 +21,113 @@
 }
 
 .productImage {
-    width: 293px;
-    height: 179px;
+    width: 18.3125rem;
+    height: 11.1875rem;
     aspect-ratio: 16/9;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
 }
 
+
+
 .productTitle {
-    padding: 0.5rem;
-    font-size: 1.2rem;
+    padding: 0.2rem;
+    font-size: 1rem;
 }
 
 .productToppings{
-    padding: 0.5rem;
-    font-size: 0.9rem;
+    height: 2.7rem;
+    padding: 0.2rem;
+    font-size: 0.7rem;
+    color: #777;
 }
 
 .productReplaceableProd {
+    padding: 0.2rem;
     font-size: 0.8rem;
     border-bottom: 1px solid #000;
 }
+
+.productBlockDetailsCol{
+    display: flex;
+    flex: 1 1 0;
+    gap: 0.4rem;
+    margin: 0.5rem auto;
+    padding: 0.5rem auto;
+    background-color: rgb(241, 241, 241);
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 1rem;
+
+    justify-content: center;
+
+    font-size: 0.8rem;
+}
+
+.productBlockToggle__FlavorBlock {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    gap: 0.5rem;
+    margin-top: 0.4rem;
+}
+
+button {
+    height: 1.6rem;
+    padding: 0 0.3rem;
+    border-radius: 1rem;
+}
+
+.active {
+    display: block;
+    background: #333;
+    color: white;
+    border-radius: 1rem;
+}
+
+
+.productBlockPriceRow {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 1rem 0.5rem 1rem;
+    gap: 4rem;
+    font-weight: 700;
+}
+
+.productBlockPriceBlock {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+
+}
+
+
+.productBlockWrap {
+    width: 8rem;
+    height: 3rem;
+    margin: -0.5rem auto; 
+    color: white;
+    font-weight: 700;
+    background-color: rgb(255, 64, 64);
+    border-radius: 1rem;
+}
+
+.productBlockWrap:hover {
+    background-color: rgb(182, 50, 50);
+}
+/* 
+.productBlockDetailsCol{
+    display: flex;
+    flex: 1 1 0;
+    margin: 0.5rem auto;
+    padding: 0.5rem auto;
+    background-color: rgb(216, 215, 215);
+    border: 1px solid #333;
+    border-radius: 1rem;
+
+    justify-content: center;
+} */
+
+
+/* 
+
 
 
 .productBlockDetailsColX{
@@ -73,10 +157,10 @@
     background: #333;
 }
 
-/* div button {
+div button {
     background-color: rgba(255, 255, 255, 0);
     padding: 0 0.66rem;
-} */
+}
 
 
 .productBlockPriceRow {
@@ -105,4 +189,4 @@
     background-color: rgb(252, 85, 85);
     border-radius: 1rem;
 
-}
+} */

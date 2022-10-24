@@ -40,7 +40,8 @@ const News = () => {
     ]
 
     return(
-        <Swiper className="container"
+        <div className={classes.news}>
+            <Swiper className="container"
             modules={[Pagination]}  
             spaceBetween={40}
             slidesPerView={1}
@@ -48,16 +49,17 @@ const News = () => {
             >
             {data.map(({id, title, body, image}) => {
                 return(
-                    <SwiperSlide className={classes.news} key={id}>
-                        <img className={classes.image} src={Pineapple}/>
-                        <div className={classes.newsDescription}>
-                            <div className={classes.title}>{title}</div>
-                            <div className={classes.description}>{body}</div>
+                    <SwiperSlide>
+                        <div className={classes.imageBox}>
+                            <img className={classes.image} src={Pineapple}/>
                         </div>
+                        <button className={classes.orderBtn}>Press</button>
                     </SwiperSlide>
                 )
             })}
         </Swiper>
+        </div>
+        
     );
 };
 
