@@ -104,7 +104,16 @@
     width: 100%;
     background-color: rgb(39, 39, 39);
     color: white;
+
 }
+
+.sticky {
+    width: 100%;
+    position: fixed;
+    top: 2rem;
+}
+
+
 
 
 .mainHeaderInner {

@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import classes from './Header.module.css'
 
 
 const Header = () => {
+
     return(
         <div>
             <div className={classes.fakeHeader}>
@@ -24,8 +25,11 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            
-            <div className={classes.mainHeader}>
+
+        
+            <div id="navbar" 
+                className={classes.mainHeader}
+                >
                 <div className={classes.container}>
                     <div className={classes.mainHeaderInner}>
                         <div className={classes.logo}>
@@ -50,8 +54,7 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            
+            </div> 
         </div>
         
     );

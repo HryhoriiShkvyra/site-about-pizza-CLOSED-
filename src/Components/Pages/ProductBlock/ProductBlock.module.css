@@ -2,13 +2,13 @@
     width: 19.7rem;
     height: 30.12rem;
     padding: 0.63rem;
-    border: 1px solid rgb(187, 187, 187);
-    border-radius: 1.5rem;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 1rem;
 }
 
 .productBlock {
     background-color: white;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     transition: 600ms all;
 
 }
@@ -24,7 +24,7 @@
     width: 18.3125rem;
     height: 11.1875rem;
     aspect-ratio: 16/9;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
 }
 
 
@@ -112,81 +112,3 @@ button {
 .productBlockWrap:hover {
     background-color: rgb(182, 50, 50);
 }
-/* 
-.productBlockDetailsCol{
-    display: flex;
-    flex: 1 1 0;
-    margin: 0.5rem auto;
-    padding: 0.5rem auto;
-    background-color: rgb(216, 215, 215);
-    border: 1px solid #333;
-    border-radius: 1rem;
-
-    justify-content: center;
-} */
-
-
-/* 
-
-
-
-.productBlockDetailsColX{
-    display: flex;
-    flex: 1 1 0;
-    margin: 0.5rem auto;
-    padding: 0.5rem auto;
-    background-color: rgb(216, 215, 215);
-    border: 1px solid #333;
-    border-radius: 1rem;
-
-    justify-content: center;
-}
-
-.productBlockDetailsColY {
-    margin-top: 1rem;
-}
-
-.productBlockToggle__FlavorBlock {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.8rem;
-}
-
-#productBtnFlavour {
-    width: 2rem;
-    background: #333;
-}
-
-div button {
-    background-color: rgba(255, 255, 255, 0);
-    padding: 0 0.66rem;
-}
-
-
-.productBlockPriceRow {
-    display: flex;
-    justify-content: center;
-    margin: 1.5rem 1rem 0.5rem 1rem;
-    gap: 4rem;
-    font-weight: 700;
-}
-
-.productBlockPriceBlock {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-    margin-top: 1rem;
-
-}
-
-.productPrice {
-
-}
-
-
-.productBlockWrap {
-    padding: 1rem 2.5rem;
-    background-color: rgb(252, 85, 85);
-    border-radius: 1rem;
-
-} */

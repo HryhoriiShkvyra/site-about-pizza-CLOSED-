@@ -3,7 +3,6 @@ import classes from './News.module.css'
 import Pineapple from '../../../Assets/pizza/Pineapple on pizza.jpg'
 
 
-
 // import Swiper core and required modules
 import {Pagination} from 'swiper';
 
@@ -42,22 +41,24 @@ const News = () => {
     return(
         <div className={classes.news}>
             <Swiper className="container"
-            modules={[Pagination]}  
-            spaceBetween={40}
-            slidesPerView={1}
-            pagination={{ clickable: true }}
-            >
-            {data.map(({id, title, body, image}) => {
-                return(
-                    <SwiperSlide>
-                        <div className={classes.imageBox}>
-                            <img className={classes.image} src={Pineapple}/>
-                        </div>
-                        <button className={classes.orderBtn}>Press</button>
-                    </SwiperSlide>
-                )
-            })}
-        </Swiper>
+                modules={[Pagination]}  
+                spaceBetween={40}
+                slidesPerView={1}
+                pagination={{ clickable: true }}
+                >
+                {data.map(({id, title, body, image}) => {
+                    return(
+                        <SwiperSlide>
+                            <div key={id} className={classes.imageBox}>
+                                <img className={classes.image} src={Pineapple}/>
+                            </div>
+                            <div className={classes.orderBtnBox}>
+                            <button className={classes.orderBtn}>Order</button>
+                            </div>
+                        </SwiperSlide>
+                    )
+                })}
+            </Swiper>
         </div>
         
     );

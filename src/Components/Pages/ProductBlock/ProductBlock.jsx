@@ -9,14 +9,7 @@ const ProductBlock = () => {
     const [activeBtnX, setActiveBtnX] = useState('#')
     const [activeBtnY, setActiveBtnY] = useState('#')
  
-    // const buttons = document.querySelectorAll('button')
 
-    // buttons.forEach(button => {
-    //     button.addEventListener('click', function() {
-    //         buttons.forEach(btn => btn.classList.remove('active'));
-    //         this.classList.add('active');
-    //     })
-    // })
 
     return (
         <div >
@@ -38,7 +31,6 @@ const ProductBlock = () => {
                                 <button onClick={() => setActiveBtnY('#thin')} className={activeBtnY === '#thin' ? 'active' : ''}>Thin</button>
                                 <button onClick={() => setActiveBtnY('#philadelphia')} className={activeBtnY === '#philadelphia' ? 'active' : ''}>Philadelphia</button>
                                 <button onClick={() => setActiveBtnY('#hot-dog')} className={activeBtnY === '#hot-dog' ? 'active' : ''}>Hot-Dog crust</button>
-                                {/* <div type="button" onClick={() => setActiveBtnY('#hot-dog')} className={activeBtnY === '#hot-dog' ? 'active' : ''}>try it</div> */}
                             </div>
                         
                         <div className={classes.productBlockPriceRow}>
