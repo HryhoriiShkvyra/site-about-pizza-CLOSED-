@@ -1,8 +1,62 @@
 import React, {useState, useEffect} from "react";
 import classes from './Header.module.css'
-
+import { useScrollPosition } from "../Hooks/useScrollPosition";
 
 const Header = () => {
+    
+    const scrollPosition = useScrollPosition()
+
+    function classNames(...classes) {
+        return classes.filter(Boolean).join('');
+    }
+
+    // const [stickyHeader, setStickyHeader] = useState(false)
+    
+    
+    // const header = document.getElementById("navbar");
+    // const sticky = window.offsetTop;
+    
+    // function stickyHeader() {
+    //     if (window.pageYOffset >= sticky) {
+    //         header.classList.add("sticky")
+    //       } else {
+    //         header.classList.remove("sticky");
+    //       }
+    //     }
+    // function sticked() {
+    //     if(window.scrollY >= 50) {
+    //         stickyHeader(true) 
+    //     } else {
+    //         stickyHeader(false)
+    //     };
+    // };
+
+    // window.addEventListener("scroll", sticked)
+
+    
+    // const [stickyClass, setStickyClass] = useState('');
+
+    // useEffect(() => {
+    //   window.addEventListener('scroll', stickNavbar);
+    //   return () => window.removeEventListener('scroll', stickNavbar);
+    // }, []);
+  
+    // const stickNavbar = () => {
+    //   if (window !== undefined) {
+    //     let windowHeight = window.pageYOffset;
+    //     // window height changed for the demo
+    //     windowHeight > 1 ? setStickyClass('sticky') : setStickyClass('');
+    //   }
+    // };
+
+    // const [activeBtn, setActiveBtn] = useState(false)
+
+    // const click = () => {
+    //     if(activeBtn != false) {
+    //         document.querySelector()
+    //     }
+    // }
+    // <button onClick={() => setActiveBtnX('#')} className={activeBtnX === '#' ? 'active' : ''}>Standard size</button>
 
     return(
         <div>
@@ -28,7 +82,7 @@ const Header = () => {
 
         
             <div id="navbar" 
-                className={classes.mainHeader}
+                className={classNames(scrollPosition > 0 ? classes.sticky : '')}
                 >
                 <div className={classes.container}>
                     <div className={classes.mainHeaderInner}>
@@ -49,12 +103,33 @@ const Header = () => {
                             </button>
                             <button className={classes.checkoutBtn}>Checkout</button>
                         </div>
-                        <div className={classes.menu}>
+                        {/* <button onclick={() => setActiveBtn(true)} className={activeBtn === true ? 'activeBtn' : ''}> */}
                             <i className="fa-solid fa-bars"></i>
-                        </div>
+                        {/* </button> */}
                     </div>
                 </div>
             </div> 
+            <div className={classes.sideMenu}>
+                <div className={classes.partOne}>
+                    <div className={classes.sideMenuBtn}>
+                        <i class="fa-solid fa-pizza-slice"></i>
+                        Pizza
+                    </div>
+                    <div className={classes.sideMenuBtn}>
+                        <i class="fa-solid fa-pizza-slice"></i>
+                        Pizza
+                    </div>
+                    <div className={classes.sideMenuBtn}>
+                        <i class="fa-solid fa-pizza-slice"></i>
+                        Pizza
+                    </div>
+                    <div className={classes.sideMenuBtn}>
+                        <i class="fa-solid fa-pizza-slice"></i>
+                        Pizza
+                    </div>
+                </div>
+                <div className={classes.partTwo}></div>
+            </div>
         </div>
         
     );

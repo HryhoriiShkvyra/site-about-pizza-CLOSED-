@@ -94,10 +94,6 @@
     background-color: white;
 }
 
-.menu {
-
-}
-
 /*---------------------- MAIN HEADER --------------------------*/
 
 .mainHeader {
@@ -111,6 +107,7 @@
     width: 100%;
     position: fixed;
     top: 2rem;
+    z-index: 999;
 }
 
 
@@ -181,10 +178,22 @@
     font-weight: 700;
 }
 
+
+
+
+/*--------------------- Side Menu -----------------------------*/
+
 .menu {
     margin: 0.4rem 0 0 1rem;
 }
 
+.sideMenu{
+    position: absolute;
+    right: 0;
+    width: 24rem;
+    border: 1px solid #333;
+    z-index: 999;
+}
 
 
 
