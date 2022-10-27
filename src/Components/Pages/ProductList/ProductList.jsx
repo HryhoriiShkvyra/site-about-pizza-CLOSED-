@@ -21,6 +21,18 @@ const ProductList = (props) => {
                 <ProductBlock/>
                 <ProductBlock/>
                 <ProductBlock/>
+                <ProductBlock/>
+                <ProductBlock/>
+                <ProductBlock/>
+                <ProductBlock/>
+                <ProductBlock/>
+                <ProductBlock/>
+                <ProductBlock/>
+                <ProductBlock/>
+                <ProductBlock/>
+                <ProductBlock/>
+                <ProductBlock/>
+                <ProductBlock/>
            </div>
             
         </div>
