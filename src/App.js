@@ -5,6 +5,7 @@ import News from './Components/Pages/news/News';
 import ProductBlock from './Components/Pages/ProductBlock/ProductBlock';
 import ProductList from './Components/Pages/ProductList/ProductList';
 import Footer from './Components/Pages/Footer/Footer';
+import { Modal } from './Components/modal/Modal';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <div className="App">
       <Header/>
       <News/>
+      <Modal/>
       <ProductList title={'Best Price'}/>
       <div style={{
         textAlign: 'center', 

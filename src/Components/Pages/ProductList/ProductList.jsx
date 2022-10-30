@@ -15,24 +15,6 @@ const ProductList = (props) => {
            </div>
            <div className={classes.containerProductList}>
                 <ProductBlock/>
-                <ProductBlock/>
-                <ProductBlock/>
-                <ProductBlock/>
-                <ProductBlock/>
-                <ProductBlock/>
-                <ProductBlock/>
-                <ProductBlock/>
-                <ProductBlock/>
-                <ProductBlock/>
-                <ProductBlock/>
-                <ProductBlock/>
-                <ProductBlock/>
-                <ProductBlock/>
-                <ProductBlock/>
-                <ProductBlock/>
-                <ProductBlock/>
-                <ProductBlock/>
-                <ProductBlock/>
            </div>
             
         </div>

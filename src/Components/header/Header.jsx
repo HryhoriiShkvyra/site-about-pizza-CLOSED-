@@ -10,6 +10,22 @@ const Header = () => {
         return classes.filter(Boolean).join('');
     }
 
+
+    const [isOpenSideMenu, setIsOpenSideMenu] = useState(false)
+    const showMenuBtn = () => {
+        setIsOpenSideMenu(isOpenSideMenu => !isOpenSideMenu)
+        if(isOpenSideMenu === false) {
+            console.log('openMenu is true')
+        } else {
+
+            console.log('openMenu is false')
+        };
+    };
+
+
+
+
+
     return(
         <div>
             <div className={classes.fakeHeader}>
@@ -53,42 +69,51 @@ const Header = () => {
                                     </button>
                                     <button className={classes.checkoutBtn}>Checkout</button>
                                 </div>
-                                    <i className="fa-solid fa-bars"></i>
+                                    <button onClick={showMenuBtn} ><i className="fa-solid fa-bars" ></i></button>
+                                    
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className={classes.sideMenu}>
-                {/* <div className={classNames=(scrollPosition > 120 ? classes.sticky : '')}> */}
+            {/* <div className={}></div> */}
+            {/* className={classes.openMenu.join('')} onClick={() => setOpen = false} */}
+            {isOpenSideMenu ? 
+                <div className={classes.sideMenu}>
                     <div className={classes.partOne}>
                         <div className={classes.partOneContent}>
                             <div className={classes.sideMenuBtn}>
-                                
-                                {/* <div className={classes.sideBtnTitle}> */}
-                                    <i class="fa-solid fa-pizza-slice"></i>
-                                    Pizza
-                                {/* </div> */}
-
+                                    <div className={classes.icon}><i class="fa-solid fa-pizza-slice"></i></div>
+                                    <div className={classes.btnTitle}>Pizza</div>
                             </div>
                             <div className={classes.sideMenuBtn}>
-                                <i class="fa-solid fa-bottle-water"></i> 
-                                Drinks                          
+                                <div className={classes.icon}><i class="fa-solid fa-bottle-water"></i></div>
+                                <div className={classes.btnTitle}>Drinks</div>
+                                                        
                             </div>
                             <div className={classes.sideMenuBtn}>
-                                <i class="fa-solid fa-bowl-food"></i>
-                                Sides
+                                <div className={classes.icon}><i class="fa-solid fa-bowl-food"></i></div>
+                                <div className={classes.btnTitle}>Sides</div>
                             </div>
                             <div className={classes.sideMenuBtn}>
-                                <i class="fa-solid fa-cookie"></i>
-                                Desserts
+                                <div className={classes.icon}><i class="fa-solid fa-cookie"></i></div>
+                                <div className={classes.btnTitle}>Desserts</div>
                             </div>
-                        </div>
-                        
+                        </div>        
                     </div>
-                    <div className={classes.partTwo}></div>
-                {/* </div> */}
-            </div>
+                    <div className={classes.partTwo}>
+                        <div className={classes.additionalInfo}>
+                            <a className={classes.infoBtn}>text</a>
+                            <a className={classes.infoBtn}>text</a>
+                            <a className={classes.infoBtn}>text</a>
+                            <a className={classes.infoBtn}>text</a>
+                            <a className={classes.infoBtn}>text</a>
+                        </div>
+                    </div>
+                </div>
+            : null
+                
+            }
         </div>
         
     );
