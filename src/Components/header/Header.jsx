@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import classes from './Header.module.css'
 import { useScrollPosition } from "../Hooks/useScrollPosition";
+import {Modal} from '../modal/Modal'
 
 const Header = () => {
     
@@ -22,6 +23,11 @@ const Header = () => {
         };
     };
 
+    
+    const [modal, setModal] = useState(false)
+    // const modalBar = () => {
+    //     setModal(modal => !modal)
+    // }
 
 
 
@@ -42,11 +48,14 @@ const Header = () => {
                         <div></div>
                         <div className={classes.rightBlock}>
                             <div className={classes.select}>select</div>
-                            <div className={classes.login}>Sing in</div>
+                            <div onClick={() => setModal(true)} className={classes.login}>Sing in</div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <Modal visible={modal} setVisible={setModal}/>
+
             <div className={classes.mainSpace}>
                 <div className={classNames=(scrollPosition > 50 ? classes.sticky : '')}>
                     <div className={classes.mainHeader}>
