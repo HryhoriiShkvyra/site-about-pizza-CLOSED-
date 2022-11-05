@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import classes from './Header.module.css'
 import { useScrollPosition } from "../Hooks/useScrollPosition";
 import {Modal} from '../modal/Modal'
+import { ModalSecond } from "../modalSecond/Modal";
 
 const Header = () => {
     
@@ -23,11 +24,8 @@ const Header = () => {
         };
     };
 
-    
     const [modal, setModal] = useState(false)
-    // const modalBar = () => {
-    //     setModal(modal => !modal)
-    // }
+    
 
 
 

@@ -1,0 +1,98 @@
+
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+}
+
+.modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    overflow-y: none;
+}
+
+.modal.deActive {
+    display: none;
+}
+
+.modalContent {
+    position: relative;
+    padding-top: 1rem;
+    background: white;
+    width: 30rem;
+    height: 20rem;
+    border-radius: 2rem;
+
+}
+
+.modalInner {
+    width: 16.5rem;
+    height: 26.5rem;
+    margin: 0 auto;
+}
+
+.modalTitle {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.modalForm {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    width: 16rem;
+    height: 8rem;
+    padding-top: 0.5rem;
+    margin: 0 auto;
+}
+
+.formField {
+    height: 2.5rem;
+    padding: 1rem;
+    border: 1px solid rgb(197, 197, 197);
+}
+
+.button {
+    height: 3rem;
+    padding: 0.7rem 1rem 1rem 1rem;
+    border-radius: 0.5rem;
+    background-color: rgb(211, 41, 41);
+    
+    margin-top: 2rem;
+
+    color: #eee;
+    font-weight: 700;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: rgb(156, 42, 42);
+}
+
+
+.br {
+    position: absolute;
+    width: 30rem;
+    bottom: 3rem;
+    border: 1px solid rgb(212, 212, 212);
+}
+
+.returnBtn {
+    position: absolute;
+    width: 10rem;
+    left: 35%;
+    bottom: 0.5rem;
+}

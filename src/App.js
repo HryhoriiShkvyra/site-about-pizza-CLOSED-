@@ -6,6 +6,7 @@ import ProductBlock from './Components/Pages/ProductBlock/ProductBlock';
 import ProductList from './Components/Pages/ProductList/ProductList';
 import Footer from './Components/Pages/Footer/Footer';
 import {Modal} from './Components/modal/Modal';
+import {ModalSecond} from './Components/modalSecond/Modal'
 
 
 
@@ -21,7 +22,7 @@ function App() {
     <div className="App">
       <Header/>
       <News/>
-      <Modal visible={modal} setVisible={setModal}/>
+      <ModalSecond/>
       <ProductList title={'Best Price'}/>
       <div style={{
         textAlign: 'center', 
