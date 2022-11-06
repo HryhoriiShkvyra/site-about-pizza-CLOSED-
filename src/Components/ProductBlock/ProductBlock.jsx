@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classes from './ProductBlock.module.css';
-import PizzaManhattan from '../../../Assets/pizza/card/pizza Manhattan.webp'
-import Pizza from '../../../Assets/pizza/Pineapple on pizza.jpg'
+import PizzaManhattan from '../../Assets/pizza/card/Pizza Manhattan.png'
+// import Pizza from '../../Assets/pizza/Pineapple on pizza.jpg'
 
 
 const ProductBlock = () => {

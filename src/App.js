@@ -1,13 +1,15 @@
 import React, {useState} from 'react'
 import './Components/styles/Index.css'
 import Header from './Components/header/Header';
-import News from './Components/Pages/news/News';
-import ProductBlock from './Components/Pages/ProductBlock/ProductBlock';
-import ProductList from './Components/Pages/ProductList/ProductList';
-import Footer from './Components/Pages/Footer/Footer';
+import News from './Components/news/News';
+import ProductBlock from './Components/ProductBlock/ProductBlock';
+import ProductList from './Components/ProductList/ProductList';
+import Footer from './Components/Footer/Footer';
 import {Modal} from './Components/modal/Modal';
 import {ModalSecond} from './Components/modalSecond/Modal'
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Index } from './Pages/Index/Index';
+import {Drinks} from './Pages/Drinks/Drinks'
 
 
 
@@ -21,16 +23,14 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <News/>
-      <ModalSecond/>
-      <ProductList title={'Best Price'}/>
-      <div style={{
-        textAlign: 'center', 
-        margin: '1rem 30rem 2rem 0', 
-        
-        }}>
-        * weight of just cooked product. The weight in delivery orders may differ due to dehydration of the product.
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Index/>}/>
+          <Route path='Drinks' element={<Drinks/>}/>
+        </Routes>
+      </BrowserRouter>
+
+      
       <Footer/>
     </div>
   );
