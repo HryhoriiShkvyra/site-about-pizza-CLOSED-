@@ -1,12 +1,12 @@
 
 
-
-
-
 .navBarBlock {
     position: relative;
+    height: 70px;
     padding-top: 20px;
-    background-color:rgb(39, 39, 39) ;
+    z-index: 10;
+    background-color: rgb(39, 39, 39);
+
 }
 
 
@@ -48,6 +48,12 @@
 
 .link {
     font-size: 18px;
+    color: #fff;
+}
+
+.linkActive {
+    font-size: 18px;
+    font-weight: 700;
     color: #fff;
 }
 
@@ -101,12 +107,12 @@
 
     font-size: 14px;
     font-weight: 700;
-}
+} 
+
 
 
 
 /* 
-
 
 .mainSpace {
     position: relative;

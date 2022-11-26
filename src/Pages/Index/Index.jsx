@@ -14,22 +14,17 @@ export const Index = () => {
 
 
     const scrollPosition = useScrollPosition()
-
-    function classNames(...classes) {
-        return classes.filter(Boolean).join('');
-    }
-
-
     const [isOpenSideMenu, setIsOpenSideMenu] = useState(false)
     const showMenuBtn = () => {
         setIsOpenSideMenu(isOpenSideMenu => !isOpenSideMenu)
         if(isOpenSideMenu === false) {
             console.log('openMenu is true')
         } else {
-
             console.log('openMenu is false')
         };
     };
+
+    const [navBarActive, setNavBarActive] = useState('#')
 
     return(
         <div>
@@ -42,10 +37,14 @@ export const Index = () => {
                                 <nav className={classes.navBar}>
                                         <div className={classes.logo}>Domino's Pizza</div>
                                         <div className={classes.barLinks}>
-                                            <Link className={classes.link} to='/' >Pizza</Link>
-                                            <Link className={classes.link} to='/Drinks' >Drinks</Link>
-                                            <Link className={classes.link} to='/Sides' >Sides</Link>
-                                            <Link className={classes.link} to='/Desserts' >Desserts</Link>
+                                            <Link onClick={() => setNavBarActive('#')} 
+                                                className={navBarActive === '#' ? classes.linkActive : classes.link} to='/' >Pizza</Link>
+                                            <Link onClick={() => setNavBarActive('drinks')} 
+                                                className={navBarActive === 'drinks' ? classes.linkActive : classes.link} to='/Drinks' >Drinks</Link>
+                                            <Link onClick={() => setNavBarActive('sides')} 
+                                                className={navBarActive === 'sides' ? classes.linkActive : classes.link} to='/Sides' >Sides</Link>
+                                            <Link onClick={() => setNavBarActive('desserts')}
+                                            className={navBarActive === 'desserts' ? classes.linkActive : classes.link} to='/Desserts' >Desserts</Link>
                                         </div>
                                         <div className={classes.btnCart}>
                                             <div className={classes.cartCount}>
@@ -58,9 +57,16 @@ export const Index = () => {
                                             <div className={classes.btnBuy}>Checkout</div>
                                         </div>
                                         <div onClick={showMenuBtn} className={classes.sideBar}>
-                                            <i className="fa-solid fa-bars"></i>
+                                            {
+                                                isOpenSideMenu ?
+                                                    <i class="fa-solid fa-xmark"></i>
+                                                    :
+                                                    <i className="fa-solid fa-bars"></i>
+
+                                            }
                                             <SideMenu/>
                                         </div>
+                                        
                                 </nav>
                             </div>
 
@@ -68,8 +74,8 @@ export const Index = () => {
                         <Routes>
                             <Route path="/" element={<Pizza/>}/>
                             <Route path="/Drinks" element={<Drinks/>}/>
-                        </Routes>
-                    </Router>
+                            </Routes>   
+                        </Router>
                 
                 
             </div>
