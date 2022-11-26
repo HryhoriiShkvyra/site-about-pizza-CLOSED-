@@ -6,7 +6,7 @@ const Footer = () => {
     return(
         <div className={classes.footer}>
             <div className={classes.containerFooter}>
-                <div>Hryhorii Shkvyra</div>
+                <div>Domino's</div>
             </div>
         </div>
     );

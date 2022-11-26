@@ -21,16 +21,16 @@ const ProductBlock = () => {
                     <a className={classes.productReplaceableProd}>Replace ingredients</a>
                     <div className={classes.productBlockDetails}>
                         <div className={classes.productBlockDetailsCol}>
-                            <button onClick={() => setActiveBtnX('#')} className={activeBtnX === '#' ? 'active' : ''}>Standard size</button>
-                            <button onClick={() => setActiveBtnX('#btnExtra')} className={activeBtnX === '#btnExtra' ? 'active' : ''}>Large</button>
-                            <button onClick={() => setActiveBtnX('#btnLarge')} className={activeBtnX === '#btnLarge' ? 'active' : ''}>ExtraLarge</button>
-                            <button onClick={() => setActiveBtnX('#btnXXL')} className={activeBtnX === '#btnXXL' ? 'active' : '   '}>XXLarge</button>
+                            <button onClick={() => setActiveBtnX('#')} className={activeBtnX === '#' ? classes.active : ''}>Standard size</button>
+                            <button onClick={() => setActiveBtnX('#btnExtra')} className={activeBtnX === '#btnExtra' ? classes.active : ''}>Large</button>
+                            <button onClick={() => setActiveBtnX('#btnLarge')} className={activeBtnX === '#btnLarge' ? classes.active : ''}>ExtraLarge</button>
+                            <button onClick={() => setActiveBtnX('#btnXXL')} className={activeBtnX === '#btnXXL' ? classes.active : '   '}>XXLarge</button>
                         </div>
                             <div className={classes.productBlockToggle__FlavorBlock}>
-                                <button onClick={() => setActiveBtnY('#')} className={activeBtnY === '#' ? 'active' : ''}>Thick crust</button>
-                                <button onClick={() => setActiveBtnY('#thin')} className={activeBtnY === '#thin' ? 'active' : ''}>Thin</button>
-                                <button onClick={() => setActiveBtnY('#philadelphia')} className={activeBtnY === '#philadelphia' ? 'active' : ''}>Philadelphia</button>
-                                <button onClick={() => setActiveBtnY('#hot-dog')} className={activeBtnY === '#hot-dog' ? 'active' : ''}>Hot-Dog crust</button>
+                                <button onClick={() => setActiveBtnY('#')} className={activeBtnY === '#' ? classes.active : ''}>Thick crust</button>
+                                <button onClick={() => setActiveBtnY('#thin')} className={activeBtnY === '#thin' ? classes.active : ''}>Thin</button>
+                                <button onClick={() => setActiveBtnY('#philadelphia')} className={activeBtnY === '#philadelphia' ? classes.active : ''}>Philadelphia</button>
+                                <button onClick={() => setActiveBtnY('#hot-dog')} className={activeBtnY === '#hot-dog' ? classes.active : ''}>Hot-Dog crust</button>
                             </div>
                         
                         <div className={classes.productBlockPriceRow}>

@@ -4,7 +4,7 @@ import Pineapple from '../../Assets/pizza/Pineapple on pizza.jpg'
 
 
 // import Swiper core and required modules
-import {Pagination} from 'swiper';
+import {Pagination, Autoplay} from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -13,6 +13,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import 'swiper/css/autoplay'
 
 
 const News = () => {
@@ -41,15 +42,17 @@ const News = () => {
     return(
         <div className={classes.news}>
             <Swiper className="container"
-                modules={[Pagination]}  
+                modules={[Pagination, Autoplay]}  
                 spaceBetween={40}
                 slidesPerView={1}
                 pagination={{ clickable: true }}
+                autoplay={{delay: 4000, disableOnInteraction: false}}
+                loop={true}
                 >
                 {data.map(({id, title, body, image}) => {
                     return(
-                        <SwiperSlide>
-                            <div key={id} className={classes.imageBox}>
+                        <SwiperSlide key={id}>
+                            <div  className={classes.imageBox}>
                                 <img className={classes.image} src={Pineapple}/>
                             </div>
                             <div className={classes.orderBtnBox}>
