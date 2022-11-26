@@ -35,26 +35,42 @@ export const Index = () => {
         <div>
             <Header/>
             <div className={classes.menu}>
-                <div className={classes.logo}>Logo</div>
-                <nav className={classes.navBar}>
                 
                     <Router>
-                        <Link/>
-                            <Link to='/' >Pizza</Link>
-                            <Link to='/Drinks' >Drinks</Link>
-                            <div className={classes.btnCart}>
-                                <div className={classes.cartCount}>count</div>
-                                <div className={classes.btnBuy}>Order</div>
+                        <div className={classes.navBarBlock}>
+                            <div className={scrollPosition > 50 ? classes.sticky : ''}>
+                                <nav className={classes.navBar}>
+                                        <div className={classes.logo}>Domino's Pizza</div>
+                                        <div className={classes.barLinks}>
+                                            <Link className={classes.link} to='/' >Pizza</Link>
+                                            <Link className={classes.link} to='/Drinks' >Drinks</Link>
+                                            <Link className={classes.link} to='/Sides' >Sides</Link>
+                                            <Link className={classes.link} to='/Desserts' >Desserts</Link>
+                                        </div>
+                                        <div className={classes.btnCart}>
+                                            <div className={classes.cartCount}>
+                                                <div className={classes.count}>
+                                                00
+                                                <i className="fa-solid fa-cart-shopping"></i>
+                                                </div>
+                                            
+                                            </div>
+                                            <div className={classes.btnBuy}>Checkout</div>
+                                        </div>
+                                        <div onClick={showMenuBtn} className={classes.sideBar}>
+                                            <i className="fa-solid fa-bars"></i>
+                                            <SideMenu/>
+                                        </div>
+                                </nav>
                             </div>
-                            <div className={classes.sideBar}>
-                                <SideMenu/>
-                            </div>
+
+                        </div>
                         <Routes>
                             <Route path="/" element={<Pizza/>}/>
                             <Route path="/Drinks" element={<Drinks/>}/>
                         </Routes>
                     </Router>
-                </nav>
+                
                 
             </div>
             {/* <div className={classes.mainSpace}>
@@ -84,7 +100,7 @@ export const Index = () => {
                     </div>
                 </div>
             </div> */}
-            <SideMenu isOpenSideMe  nu={isOpenSideMenu}/>
+            <SideMenu isOpenSideMenu={isOpenSideMenu}/>
             {/* <News/> */}
             {/* <ProductList title={'Best Price'}/> */}
                
