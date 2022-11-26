@@ -26,8 +26,7 @@ function App() {
      
       <Index/>
       
-      {/* <News/>
-      <ProductList title={'Best Price'}/> */}
+     
       <div style={{
         textAlign: 'center', 
         margin: '1rem 30rem 2rem 0', 

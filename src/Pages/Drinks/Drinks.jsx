@@ -1,14 +1,10 @@
 import React from "react";
-import { Index } from "../Index/Index";
 import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
+import classes from './Drinks.module.css'
 
 export const Drinks = () => {
     return(
-        <div>
-            sssssssss
-            sssssssss
-            sssssssss
-            sssssssss
+        <div className={classes.container}>
 
         </div>
     )
