@@ -25,8 +25,15 @@
     height: 11.1875rem;
     aspect-ratio: 16/9;
     border-radius: 1rem;
+
+    transition: transform .2s;
 }
 
+.productImage:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.01); 
+}
 
 
 .productTitle {
@@ -53,65 +60,68 @@
     grid-template-columns: 35% 15% 25% 25%;
 
     margin-top: 10px;
-
     text-align: center;
     
+
     background-color: rgb(236, 236, 236);
     border: 1px solid rgb(221, 221, 221);
     border-radius: 20px;
 
 }
 
-.productBtnBlock {
-    
-}
+
 
 .productBtn {
-    font-size: 16px;
-    /* margin: 10px auto 0; */
-
+    font-size: 13px;
+    padding: 5px 0;
     background-color: rgb(236, 236, 236);
     border-radius: 20px;
+}
 
-
+.productBtnFlavor {
+    font-size: 13px;
+    padding: 5px 0;
+    background-color: rgb(236, 236, 236);
+    border-radius: 20px;
 }
 
 .productBtnActive {
-    font-size: 16px;
+    font-size: 13px;
     color: #fff;
     background-color: #666;
 
     border-radius: 20px;
-}
+
+    transition: 400ms all}
 
 
 .productBlockToggle__FlavorBlock {
     display: grid;
     grid-template-columns: 49% 49%;
     gap: 10px;
-    margin-top: 0.4rem;
+    margin-top: 15px;
 }
 
 
 
 .productBlockPriceRow {
-    display: flex;
-    justify-content: center;
-    margin: 1.5rem 1rem 0.5rem 0;
-    gap: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
     font-weight: 700;
 }
 
 .productBlockPriceBlock {
     display: flex;
+    margin: 10px 0 0 10px;
     
 }
 
 
 .productBlockWrap {
-    width: 140px;
+    width: 138px;
     height: 3rem;
-    margin: -8px -40px 0 0; 
+    margin: -8px 0px 0 20px; 
     color: white;
     font-size: 18px;
     font-weight: 700;
@@ -124,23 +134,52 @@
 }
 
 
-.increaseDecrease   n {
+.increaseDecreaseBtns{
     display: flex;
-    width: 140px;
+    width: 138px;
     height: 48px;
 
-    margin: -8px -45px 0 0; 
+    margin: -8px 0 0 10px; 
 
-
-    border: 2px solid #777;
+    background-color: rgba(237, 237, 237, 0.671);
+    border: 1px solid rgb(212, 212, 212);
     border-radius: 16px;
 }
 
-.increaseBtn {
+/* .increaseBtn {
     width: 48px;
     height: 48px;
     margin: -2px 0 0 -1px;
-    border: 2px solid #777;
+    border: 2px solid rgb(212, 212, 212);
     border-radius: 15px;
 
+} */
+
+.increase {
+    width: 48px;
+    height: 48px;
+    margin: -1px 0 0 19px;
+
+    font-size: 18px;
+
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 15px;
+
+}
+
+.decrease {
+    width: 48px;
+    height: 48px;
+    margin: -1px 0 0 -2px;
+
+    font-size: 18px;
+
+
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 15px;
+
+}
+
+.count {
+    margin: 9px 0 0 20px;
 }

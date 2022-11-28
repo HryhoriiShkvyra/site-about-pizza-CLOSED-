@@ -6,6 +6,7 @@ import { Drinks } from "../Drinks/Drinks";
 import { useScrollPosition } from "../../Components/Hooks/useScrollPosition";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Pizza } from "../Pizza/Pizza";
+import Checkout from "../Checkout/Checkout";
 
 import classes from './Index.module.css'
 import { SideMenu } from "../../Components/SideMenu/SideMenu";
@@ -26,6 +27,8 @@ export const Index = () => {
 
     const [navBarActive, setNavBarActive] = useState('#')
 
+    const [isPizzaCount, setIsPizzaCount] = useState(0)
+
     return(
         <div>
             <Header/>
@@ -35,27 +38,39 @@ export const Index = () => {
                         <div className={classes.navBarBlock}>
                             <div className={scrollPosition > 50 ? classes.sticky : ''}>
                                 <nav className={classes.navBar}>
-                                        <div className={classes.logo}>Domino's Pizza</div>
                                         <div className={classes.barLinks}>
-                                            <Link onClick={() => setNavBarActive('#')} 
-                                                className={navBarActive === '#' ? classes.linkActive : classes.link} to='/' >Pizza</Link>
-                                            <Link onClick={() => setNavBarActive('drinks')} 
-                                                className={navBarActive === 'drinks' ? classes.linkActive : classes.link} to='/Drinks' >Drinks</Link>
-                                            <Link onClick={() => setNavBarActive('sides')} 
-                                                className={navBarActive === 'sides' ? classes.linkActive : classes.link} to='/Sides' >Sides</Link>
-                                            <Link onClick={() => setNavBarActive('desserts')}
-                                            className={navBarActive === 'desserts' ? classes.linkActive : classes.link} to='/Desserts' >Desserts</Link>
-                                        </div>
-                                        <div className={classes.btnCart}>
-                                            <div className={classes.cartCount}>
-                                                <div className={classes.count}>
-                                                00
-                                                <i className="fa-solid fa-cart-shopping"></i>
-                                                </div>
-                                            
+                                            <Link onClick={() => setNavBarActive('index')} to='/Pizza'>
+                                                <div className={classes.logo}>Domino's Pizza</div>
+                                            </Link>
+                                            <div className={classes.links}>
+                                                <Link onClick={() => setNavBarActive('pizza')} 
+                                                    className={navBarActive === 'pizza' ? classes.linkActive : classes.link} to='/Pizza' >Pizza</Link>
+                                                <Link onClick={() => setNavBarActive('drinks')} 
+                                                    className={navBarActive === 'drinks' ? classes.linkActive : classes.link} to='/Drinks' >Drinks</Link>
+                                                <Link onClick={() => setNavBarActive('sides')} 
+                                                    className={navBarActive === 'sides' ? classes.linkActive : classes.link} to='/Sides' >Sides</Link>
+                                                <Link onClick={() => setNavBarActive('desserts')}
+                                                    className={navBarActive === 'desserts' ? classes.linkActive : classes.link} to='/Desserts' >Dessert</Link>
                                             </div>
-                                            <div className={classes.btnBuy}>Checkout</div>
+                                            <Link className={classes.checkoutBlockLink} to='/Checkout'>
+                                                <div className={isPizzaCount === 0 ? classes.checkoutBlock : classes.checkoutBlockActive}>
+                                                    <div className={classes.checkout}>
+                                                        <div className={classes.count}>
+                                                                {isPizzaCount}
+                                                        </div>
+                                                        <i style={{fontSize: '14px'}} className="fa-solid fa-cart-shopping"></i>
+                                                    </div>
+                                                    {isPizzaCount === 0 ? 
+                                                            null
+                                                        :
+                                                            <div className={classes.price}>295.00 uah</div>
+                                                    }
+
+                                                    <div className={classes.btnBuy}>Checkout</div>
+                                                </div>
+                                            </Link>
                                         </div>
+                                       
                                         <div onClick={showMenuBtn} className={classes.sideBar}>
                                             {
                                                 isOpenSideMenu ?
@@ -72,10 +87,13 @@ export const Index = () => {
 
                         </div>
                         <Routes>
-                            <Route path="/" element={<Pizza/>}/>
+                            <Route path="/Pizza" element={<Pizza 
+                            isPizzaCount={isPizzaCount} setIsPizzaCount={setIsPizzaCount}
+                            navBarActive={navBarActive} setNavBarActive={setNavBarActive}/>}/>
                             <Route path="/Drinks" element={<Drinks/>}/>
-                            </Routes>   
-                        </Router>
+                            <Route path="/Checkout" element={<Checkout/>}/>
+                        </Routes>   
+                    </Router>
                 
                 
             </div>

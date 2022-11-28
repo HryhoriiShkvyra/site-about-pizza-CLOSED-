@@ -5,11 +5,16 @@ import classes from './Pizza.module.css'
 
 
 
-export const Pizza = () => {
+export const Pizza = ({isPizzaCount, setIsPizzaCount, navBarActive, setNavBarActive}) => {
     return(
         <div>
-            <News/>
-            <ProductList title={'Best Price'}/>
+            { navBarActive === 'index' ?
+                <News/>
+            :
+                null
+
+            }
+            <ProductList title={'Pizza Best price'} isPizzaCount={isPizzaCount} setIsPizzaCount={setIsPizzaCount}/>
         </div>
     );
 };

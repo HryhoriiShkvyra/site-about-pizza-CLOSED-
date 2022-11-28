@@ -4,17 +4,18 @@ import classes from './ProductList.module.css'
 
 
 
-const ProductList = (props) => {
+const ProductList = ({title, isPizzaCount, setIsPizzaCount}) => {
     return(
         <div>
            <div className={classes.productListTitle}>
-                <div>{props.title}</div>
+                <div>{title}</div>
                 <div className={classes.productListTitleInfo}>
                     <i class="fa-solid fa-circle-exclamation"></i>
                 </div>
            </div>
            <div className={classes.containerProductList}>
-                <ProductBlock/>
+                <ProductBlock isPizzaCount={isPizzaCount} setIsPizzaCount={setIsPizzaCount}/>
+               
            </div>
             
         </div>
