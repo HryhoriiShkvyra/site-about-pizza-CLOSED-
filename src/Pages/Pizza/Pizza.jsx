@@ -5,7 +5,7 @@ import classes from './Pizza.module.css'
 
 
 
-export const Pizza = ({isPizzaCount, setIsPizzaCount, navBarActive, setNavBarActive}) => {
+export const Pizza = ({isItemsCount, setIsItemsCount, navBarActive, setNavBarActive}) => {
     return(
         <div>
             { navBarActive === 'index' ?
@@ -14,7 +14,7 @@ export const Pizza = ({isPizzaCount, setIsPizzaCount, navBarActive, setNavBarAct
                 null
 
             }
-            <ProductList title={'Pizza Best price'} isPizzaCount={isPizzaCount} setIsPizzaCount={setIsPizzaCount}/>
+            <ProductList title={'Pizza Best price'} isItemsCount={isItemsCount} setIsItemsCount={setIsItemsCount}/>
         </div>
     );
 };

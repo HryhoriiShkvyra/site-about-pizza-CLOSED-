@@ -27,7 +27,7 @@ export const Index = () => {
 
     const [navBarActive, setNavBarActive] = useState('#')
 
-    const [isPizzaCount, setIsPizzaCount] = useState(0)
+    const [isItemsCount, setIsItemsCount] = useState(0)
 
     return(
         <div>
@@ -53,14 +53,14 @@ export const Index = () => {
                                                     className={navBarActive === 'desserts' ? classes.linkActive : classes.link} to='/Desserts' >Dessert</Link>
                                             </div>
                                             <Link className={classes.checkoutBlockLink} to='/Checkout'>
-                                                <div className={isPizzaCount === 0 ? classes.checkoutBlock : classes.checkoutBlockActive}>
+                                                <div className={isItemsCount === 0 ? classes.checkoutBlock : classes.checkoutBlockActive}>
                                                     <div className={classes.checkout}>
                                                         <div className={classes.count}>
-                                                                {isPizzaCount}
+                                                                {isItemsCount}
                                                         </div>
                                                         <i style={{fontSize: '14px'}} className="fa-solid fa-cart-shopping"></i>
                                                     </div>
-                                                    {isPizzaCount === 0 ? 
+                                                    {isItemsCount === 0 ? 
                                                             null
                                                         :
                                                             <div className={classes.price}>295.00 uah</div>
@@ -88,7 +88,7 @@ export const Index = () => {
                         </div>
                         <Routes>
                             <Route path="/Pizza" element={<Pizza 
-                            isPizzaCount={isPizzaCount} setIsPizzaCount={setIsPizzaCount}
+                            isItemsCount={isItemsCount} setIsItemsCount={setIsItemsCount}
                             navBarActive={navBarActive} setNavBarActive={setNavBarActive}/>}/>
                             <Route path="/Drinks" element={<Drinks/>}/>
                             <Route path="/Checkout" element={<Checkout/>}/>
