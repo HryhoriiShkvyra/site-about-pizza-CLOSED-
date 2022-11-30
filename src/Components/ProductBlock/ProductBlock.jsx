@@ -4,11 +4,12 @@ import PizzaManhattan from '../../Assets/pizza/card/Pizza Manhattan.png'
 // import Pizza from '../../Assets/pizza/Pineapple on pizza.jpg'
 
 
-const ProductBlock = ({isItemsCount, setIsItemsCount}) => {
+const ProductBlock = ({isItemsCount, setIsItemsCount, product}) => {
 
     const [isSize, setIsSize] = useState('standard')
     const [isCrust, setIsCrust] = useState('thick')
     // const [isPrice, setIsPrice] = useState(0)
+    const priceCount = [isSize, isCrust];
     let isPrice = '0'
     // const [sizeAndCrust, setSizeAndCrust] = useState()
 
@@ -18,15 +19,14 @@ const ProductBlock = ({isItemsCount, setIsItemsCount}) => {
     };
     function decrease() {
         setIsItemsCount(isItemsCount - 1)
-        console.log('count - 1');npm
+        console.log('count - 1');
 
     };
 
+    console.log(product.title)
 
 
-    const priceCount = [isSize, isCrust];
-    console.log(priceCount);
-    
+
 
     return (
         <div >
@@ -61,9 +61,9 @@ const ProductBlock = ({isItemsCount, setIsItemsCount}) => {
                         <div className={classes.productBlockPriceRow}>
                             <div className={classes.productBlockPriceBlock}>
                                 <div className={classes.productPrice}>{(() => {
-                                    if (isSize === 'standard') {
+                                    if (`${priceCount}` === 'standard,thick') {
                                     return (
-                                        (isPrice = 30)
+                                        (isPrice = 100)
                                     )
                                     } else if (isSize === 'extra') {
                                     return (
