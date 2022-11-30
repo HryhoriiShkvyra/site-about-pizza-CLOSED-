@@ -5,6 +5,9 @@ import classes from './ProductList.module.css'
 
 
 const ProductList = ({title, isItemsCount, setIsItemsCount}) => {
+
+
+
     return(
         <div>
            <div className={classes.productListTitle}>
@@ -14,6 +17,7 @@ const ProductList = ({title, isItemsCount, setIsItemsCount}) => {
                 </div>
            </div>
            <div className={classes.containerProductList}>
+                <ProductBlock isItemsCount={isItemsCount} setIsItemsCount={setIsItemsCount}/>
                 <ProductBlock isItemsCount={isItemsCount} setIsItemsCount={setIsItemsCount}/>
                
            </div>

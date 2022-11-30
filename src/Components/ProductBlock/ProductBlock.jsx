@@ -18,16 +18,10 @@ const ProductBlock = ({isItemsCount, setIsItemsCount}) => {
     };
     function decrease() {
         setIsItemsCount(isItemsCount - 1)
-        console.log('count - 1');
+        console.log('count - 1');npm
 
     };
 
-    // const priceList = ([
-    //     {name: 'standard', price: 25},
-    //     {name: 'standard', price: 35},
-    //     {name: 'standard', price: 45},
-    //     {name: 'standard', price: 55},
-    // ])
 
 
     const priceCount = [isSize, isCrust];

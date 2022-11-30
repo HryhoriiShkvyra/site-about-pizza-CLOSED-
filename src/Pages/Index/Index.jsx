@@ -27,6 +27,7 @@ export const Index = () => {
 
     const [navBarActive, setNavBarActive] = useState('#')
 
+    
     const [isItemsCount, setIsItemsCount] = useState(0)
 
     return(
