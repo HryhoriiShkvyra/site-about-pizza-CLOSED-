@@ -40,12 +40,12 @@ export const Index = () => {
                             <div className={scrollPosition > 50 ? classes.sticky : ''}>
                                 <nav className={classes.navBar}>
                                         <div className={classes.barLinks}>
-                                            <Link onClick={() => setNavBarActive('index')} to='/Pizza'>
+                                            <Link onClick={() => setNavBarActive('index')} to='/'>
                                                 <div className={classes.logo}>Domino's Pizza</div>
                                             </Link>
                                             <div className={classes.links}>
                                                 <Link onClick={() => setNavBarActive('pizza')} 
-                                                    className={navBarActive === 'pizza' ? classes.linkActive : classes.link} to='/Pizza' >Pizza</Link>
+                                                    className={navBarActive === 'pizza' ? classes.linkActive : classes.link} to='/  ' >Pizza</Link>
                                                 <Link onClick={() => setNavBarActive('drinks')} 
                                                     className={navBarActive === 'drinks' ? classes.linkActive : classes.link} to='/Drinks' >Drinks</Link>
                                                 <Link onClick={() => setNavBarActive('sides')} 
@@ -88,10 +88,12 @@ export const Index = () => {
 
                         </div>
                         <Routes>
-                            <Route path="/Pizza" element={<Pizza 
+                            <Route path="/" element={<Pizza 
                             isItemsCount={isItemsCount} setIsItemsCount={setIsItemsCount}
                             navBarActive={navBarActive} setNavBarActive={setNavBarActive}/>}/>
-                            <Route path="/Drinks" element={<Drinks/>}/>
+                            <Route path="/Drinks" element={<Drinks 
+                            isItemsCount={isItemsCount} setIsItemsCount={setIsItemsCount}
+                            />}/>
                             <Route path="/Checkout" element={<Checkout/>}/>
                         </Routes>   
                     </Router>
