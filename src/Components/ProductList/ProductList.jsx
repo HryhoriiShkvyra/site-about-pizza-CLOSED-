@@ -20,42 +20,89 @@ const ProductList = ({title, isItemsCount, setIsItemsCount}) => {
         title: 'Pizza Manhattan',
         photo: pizzaManhattan,
         ingredients: `(double serving of mushrooms), Mushrooms, Mozarella, Peperoni, Al'fredo sauce`,
+        price_1: '222',
+        price_2: '266',
+        price_3: '275',
+        price_4: '263',
+        price_5: '316',
+        price_6: '323',
+        price_7: '293',
+        price_8: '353',
+        price_9: '368',
+        price_10: '349',
+        price_11: '424',
+        price_12: '439',
         },
         {id: 'pizzaPepperoniWithTomatoes',
         title: 'Pizza Pepperoni with tomatoes',
         photo: pizzaPepperoniWithTomatoes,
         ingredients: `Mozarella, Peperoni, Tomatoes, BBQ sauce`,
+        price_1: '222',
+        price_2: '266',
+        price_3: '275',
+        price_4: '263',
+        price_5: '316',
+        price_6: '323',
+        price_7: '293',
+        price_8: '353',
+        price_9: '368',
+        price_10: '349',
+        price_11: '424',
+        price_12: '439',
         },
         {id: 'pizzaHamMushrooms',
         title: 'Pizza Ham & mushrooms',
         photo: pizzaHamMushrooms,
         ingredients: `Ham, Mushrooms, Mozarella, Domino's sauce`,
+        price_1: '222',
+        price_2: '266',
+        price_3: '275',
+        price_4: '263',
+        price_5: '316',
+        price_6: '323',
+        price_7: '293',
+        price_8: '353',
+        price_9: '368',
+        price_10: '349',
+        price_11: '424',
+        price_12: '439',
         },
         {id: 'pizzaTexas',
         title: 'Pizza Texas',
         photo: pizzaTexas,
         ingredients: `Corn, Onion, Mushrooms, Bavarian sausages, Mozarella, BBQ sauce`,
+        price_1: '222',
+        price_2: '266',
+        price_3: '275',
+        price_4: '263',
+        price_5: '316',
+        price_6: '323',
+        price_7: '293',
+        price_8: '353',
+        price_9: '368',
+        price_10: '349',
+        price_11: '424',
+        price_12: '439',
         },
     ])
 
     
 
-    const priceListFor_productListPizzaBestPrice = ([
-        {price_1: '222'},
-        {price_2: '266'},
-        {price_3: '275'},
-        {price_4: '263'},
-        {price_5: '316'},
-        {price_6: '323'},
-        {price_7: '293'},
-        {price_8: '353'},
-        {price_9: '368'},
-        {price_10: '349'},
-        {price_11: '424'},
-        {price_12: '439'},
-    ])
+    // const priceListFor_productListPizzaBestPrice = ([
+    //     {price_1: '222'},
+    //     {price_2: '266'},
+    //     {price_3: '275'},
+    //     {price_4: '263'},
+    //     {price_5: '316'},
+    //     {price_6: '323'},
+    //     {price_7: '293'},
+    //     {price_8: '353'},
+    //     {price_9: '368'},
+    //     {price_10: '349'},
+    //     {price_11: '424'},
+    //     {price_12: '439'},
+    // ])
 
-    console.log(priceListFor_productListPizzaBestPrice)
 
     const productListPizzaHeroes = ([
         {id: 'pizzaTonyPepperoni',
@@ -106,7 +153,7 @@ const ProductList = ({title, isItemsCount, setIsItemsCount}) => {
                 {productListPizzaBestPrice.map(product => 
                     <div key={product.id}>
                         <ProductBlock isItemsCount={isItemsCount} setIsItemsCount={setIsItemsCount} 
-                        product={product} price={priceListFor_productListPizzaBestPrice}/>
+                        product={product}/>
                     </div>
                 )} 
             </div>

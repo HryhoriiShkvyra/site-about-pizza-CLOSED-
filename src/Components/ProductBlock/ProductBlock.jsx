@@ -8,7 +8,7 @@ const ProductBlock = ({isItemsCount, setIsItemsCount, product, price}) => {
 
     const [isSize, setIsSize] = useState('standard')
     const [isCrust, setIsCrust] = useState('thick')
-    const priceCount = [isSize, isCrust];
+    const sizeValue = [isSize, isCrust];
     let isPrice = '0'
 
     const [count, setCount] = useState(0)
@@ -25,7 +25,6 @@ const ProductBlock = ({isItemsCount, setIsItemsCount, product, price}) => {
     
     setIsItemsCount(isItemsCount + count)
     
-    // console.log(price.price_1)
 
 
 
@@ -42,10 +41,10 @@ const ProductBlock = ({isItemsCount, setIsItemsCount, product, price}) => {
                         <div className={classes.productBlockDetailsCol}>
                                 <button onClick={() => setIsSize('standard')} 
                                 className={isSize === 'standard' ? classes.productBtnActive : classes.productBtn}>Standard  size</button>
-                                <button onClick={() => setIsSize('extra')} 
-                                className={isSize === 'extra' ? classes.productBtnActive : classes.productBtn}>Large</button>
                                 <button onClick={() => setIsSize('large')} 
-                                className={isSize === 'large' ? classes.productBtnActive : classes.productBtn}>ExtraLarge</button>
+                                className={isSize === 'large' ? classes.productBtnActive : classes.productBtn}>Large</button>
+                                <button onClick={() => setIsSize('extra')} 
+                                className={isSize === 'extra' ? classes.productBtnActive : classes.productBtn}>ExtraLarge</button>
                                 <button onClick={() => setIsSize('xxl')} 
                                 className={isSize === 'xxl' ? classes.productBtnActive : classes.productBtn}>XXLarge</button>
                         </div>
@@ -63,27 +62,71 @@ const ProductBlock = ({isItemsCount, setIsItemsCount, product, price}) => {
                         <div className={classes.productBlockPriceRow}>
                             <div className={classes.productBlockPriceBlock}>
                                 <div className={classes.productPrice}>{(() => {
-                                    if (`${priceCount}` === 'standard,thick') {
+                                    if (`${sizeValue}` === 'standard,thick') {
                                     return (
-                                        (isPrice = 100)
+                                        (isPrice = product.price_1)
                                     )
-                                    } else if (isSize === 'extra') {
+                                    } else if (`${sizeValue}` === 'standard,thin') {
                                     return (
-                                        (isPrice = 40)
+                                        (isPrice = product.price_1)
                                     )
-                                    } else if (isSize === 'large') {
+                                    } else if (`${sizeValue}` === 'standard,philadelphia') {
                                     return (
-                                        (isPrice = 50)
+                                        (isPrice = product.price_2)
                                     )
-                                    } else if (isSize === 'xxl') {
+                                    } else if (`${sizeValue}` === 'standard,hot-dog') {
                                         return(
-                                            (isPrice = 60)
+                                            (isPrice = product.price_3)
                                         )
-                                    } else if (priceCount === 'thick') {
+                                    } else if (`${sizeValue}` === 'large,thick') {
                                         return(
-                                            (isPrice = '35')
+                                            (isPrice = product.price_4)
                                         )
-                                    }   
+                                    } else if (`${sizeValue}` === 'large,thin') {
+                                        return(
+                                            (isPrice = product.price_4)
+                                        )
+                                    } else if (`${sizeValue}` === 'large,philadelphia') {
+                                        return (
+                                            (isPrice = product.price_5)
+                                        )
+                                    } else if (`${sizeValue}` === 'large,hot-dog') {
+                                        return(
+                                            (isPrice = product.price_6)
+                                        )
+                                    } else if (`${sizeValue}` === 'extra,thick') {
+                                        return(
+                                            (isPrice = product.price_7)
+                                        )
+                                    } else if (`${sizeValue}` === 'extra,thin') {
+                                        return(
+                                            (isPrice = product.price_7)
+                                        )
+                                    } else if (`${sizeValue}` === 'extra,philadelphia') {
+                                        return(
+                                            (isPrice = product.price_8)
+                                        )
+                                    } else if (`${sizeValue}` === 'extra,hot-dog') {
+                                        return(
+                                            (isPrice = product.price_9)
+                                        )
+                                    } else if (`${sizeValue}` === 'xxl,thick') {
+                                        return(
+                                            (isPrice = product.price_10)
+                                        ) 
+                                    } else if (`${sizeValue}` === 'xxl,thin') {
+                                        return(
+                                            (isPrice = product.price_10)
+                                        )
+                                    } else if (`${sizeValue}` === 'xxl,philadelphia') {
+                                        return(
+                                            (isPrice = product.price_11)
+                                        )
+                                    } else if (`${sizeValue}` === 'xxl,hot-dog') {
+                                        return (
+                                            (isPrice = product.price_12)
+                                        )
+                                    }
                                 })()}
                                 </div>
                                 <div>uah</div>
