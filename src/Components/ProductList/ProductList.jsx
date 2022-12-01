@@ -15,7 +15,7 @@ import pizzaCountry from '../../Assets/pizza/pizzaCountry.jpg';
 
 const ProductList = ({title, isItemsCount, setIsItemsCount}) => {
 
-    const productList = ([
+    const productListPizzaBestPrice = ([
         {id: 'pizzaManhattan',
         title: 'Pizza Manhattan',
         photo: pizzaManhattan,
@@ -36,6 +36,28 @@ const ProductList = ({title, isItemsCount, setIsItemsCount}) => {
         photo: pizzaTexas,
         ingredients: `Corn, Onion, Mushrooms, Bavarian sausages, Mozarella, BBQ sauce`,
         },
+    ])
+
+    
+
+    const priceListFor_productListPizzaBestPrice = ([
+        {price_1: '222'},
+        {price_2: '266'},
+        {price_3: '275'},
+        {price_4: '263'},
+        {price_5: '316'},
+        {price_6: '323'},
+        {price_7: '293'},
+        {price_8: '353'},
+        {price_9: '368'},
+        {price_10: '349'},
+        {price_11: '424'},
+        {price_12: '439'},
+    ])
+
+    console.log(priceListFor_productListPizzaBestPrice)
+
+    const productListPizzaHeroes = ([
         {id: 'pizzaTonyPepperoni',
         title: 'Pizza Tony Pepperoni',
         photo: pizzaTonyPepperoni,
@@ -73,25 +95,35 @@ const ProductList = ({title, isItemsCount, setIsItemsCount}) => {
 
     return(
         <div>
-           <div className={classes.productListTitle}>
+
+            <div className={classes.productListTitle}>
                 <div>{title}</div>
                 <div className={classes.productListTitleInfo}>
                     <i class="fa-solid fa-circle-exclamation"></i>
                 </div>
-           </div>
+            </div>
            <div className={classes.containerProductList}>
-
-            {productList.map((product, index) => {
-                <div key={product.id} >
-                    <ProductBlock isItemsCount={isItemsCount} setIsItemsCount={setIsItemsCount} product={product}/>
+                {productListPizzaBestPrice.map(product => 
+                    <div key={product.id}>
+                        <ProductBlock isItemsCount={isItemsCount} setIsItemsCount={setIsItemsCount} 
+                        product={product} price={priceListFor_productListPizzaBestPrice}/>
+                    </div>
+                )} 
+            </div>
+            
+            <div className={classes.productListTitle}>
+                <div>Hot Deal</div>
+                <div className={classes.productListTitleInfo}>
+                    <i class="fa-solid fa-circle-exclamation"></i>
                 </div>
-            })
-
-            }
-                {/* <ProductBlock isItemsCount={isItemsCount} setIsItemsCount={setIsItemsCount}/>
-                <ProductBlock isItemsCount={isItemsCount} setIsItemsCount={setIsItemsCount}/> */}
-               
-           </div>
+            </div>
+            <div className={classes.containerProductList}>
+               {productListPizzaHeroes.map(product => 
+                    <div key={product.id}>
+                        <ProductBlock isItemsCount={isItemsCount} setIsItemsCount={setIsItemsCount} product={product}/>
+                    </div>
+                )}
+            </div>
             
         </div>
     );

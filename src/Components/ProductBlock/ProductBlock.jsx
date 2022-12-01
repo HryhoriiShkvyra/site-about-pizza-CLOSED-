@@ -4,26 +4,28 @@ import PizzaManhattan from '../../Assets/pizza/card/Pizza Manhattan.png'
 // import Pizza from '../../Assets/pizza/Pineapple on pizza.jpg'
 
 
-const ProductBlock = ({isItemsCount, setIsItemsCount, product}) => {
+const ProductBlock = ({isItemsCount, setIsItemsCount, product, price}) => {
 
     const [isSize, setIsSize] = useState('standard')
     const [isCrust, setIsCrust] = useState('thick')
-    // const [isPrice, setIsPrice] = useState(0)
     const priceCount = [isSize, isCrust];
     let isPrice = '0'
-    // const [sizeAndCrust, setSizeAndCrust] = useState()
 
+    const [count, setCount] = useState(0)
     function increase() {
-        setIsItemsCount(isItemsCount + 1)
+        setCount(count + 1)
         console.log('count + 1');
     };
     function decrease() {
-        setIsItemsCount(isItemsCount - 1)
+        setCount(count - 1)
         console.log('count - 1');
 
     };
 
-    console.log(product.title)
+    
+    setIsItemsCount(isItemsCount + count)
+    
+    // console.log(price.price_1)
 
 
 
@@ -32,9 +34,9 @@ const ProductBlock = ({isItemsCount, setIsItemsCount, product}) => {
         <div >
             <div className={classes.productBlock}>
                 <div className={classes.productBlockInner}>
-                    <img className={classes.productImage} alt='image' src={PizzaManhattan} />
-                    <div className={classes.productTitle}>Pizza Manhattan </div>
-                    <div className={classes.productToppings}>(double serving of mushrooms), Mushrooms, Mozarella, Peperoni, Al'fredo sauce</div>
+                    <img className={classes.productImage} alt='image' src={product.photo} />
+                    <div className={classes.productTitle}>{product.title}</div>
+                    <div className={classes.productToppings}>{product.ingredients}</div>
                     <a className={classes.productReplaceableProd}>Replace ingredients</a>
                     <div className={classes.productBlockDetails}>
                         <div className={classes.productBlockDetailsCol}>
@@ -87,7 +89,7 @@ const ProductBlock = ({isItemsCount, setIsItemsCount, product}) => {
                                 <div>uah</div>
                             </div>
                             {
-                                isItemsCount === 0 ?
+                                count === 0 ?
                                     <button onClick={increase} className={classes.productBlockWrap}>To cart</button>
                                       
                                 :
@@ -99,7 +101,7 @@ const ProductBlock = ({isItemsCount, setIsItemsCount, product}) => {
                                     </div>
                                     
                                     <div className={classes.count}>
-                                        {isItemsCount}
+                                        {count}
                                     </div>
                                     <div className={classes.increaseBtn}>
                                         <button className={classes.increase} onClick={increase}>
