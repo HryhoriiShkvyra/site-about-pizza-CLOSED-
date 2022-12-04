@@ -9,11 +9,12 @@ import {Pagination, Autoplay} from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import 'swiper/css/autoplay'
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
+// import 'swiper/css/navigation.css';
+// import 'swiper/css/scrollbar.css';
+// import 'swiper/css/autoplay.css';
 
 
 const News = () => {

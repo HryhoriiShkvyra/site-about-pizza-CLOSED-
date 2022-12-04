@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import classes from './ProductBlock.module.css';
-import PizzaManhattan from '../../Assets/pizza/card/Pizza Manhattan.png'
+import PizzaManhattan from '../../Assets/pizza/card/Pizza Manhattan.png';
+import { ProductBlockDetailsCol, sizeValue } from '../ProductButtons/ProductButtons';
+import { ProductBlockToggle__FlavorBlock } from '../ProductButtons/ProductButtons';
+import { SizeValue } from '../../Components/ProductButtons/ProductButtons'
 // import Pizza from '../../Assets/pizza/Pineapple on pizza.jpg'
 
 
 const ProductBlock = ({isItemsCount, setIsItemsCount, product, price}) => {
 
-    const [isSize, setIsSize] = useState('standard')
-    const [isCrust, setIsCrust] = useState('thick')
-    const sizeValue = [isSize, isCrust];
     let isPrice = '0'
 
     const [count, setCount] = useState(0)
@@ -22,10 +22,10 @@ const ProductBlock = ({isItemsCount, setIsItemsCount, product, price}) => {
 
     };
 
-    
+    isSize = ProductBlockDetailsCol.isSize;
+
     setIsItemsCount(isItemsCount + count)
     
-
 
 
 
@@ -38,91 +38,74 @@ const ProductBlock = ({isItemsCount, setIsItemsCount, product, price}) => {
                     <div className={classes.productToppings}>{product.ingredients}</div>
                     <a className={classes.productReplaceableProd}>Replace ingredients</a>
                     <div className={classes.productBlockDetails}>
-                        <div className={classes.productBlockDetailsCol}>
-                                <button onClick={() => setIsSize('standard')} 
-                                className={isSize === 'standard' ? classes.productBtnActive : classes.productBtn}>Standard  size</button>
-                                <button onClick={() => setIsSize('large')} 
-                                className={isSize === 'large' ? classes.productBtnActive : classes.productBtn}>Large</button>
-                                <button onClick={() => setIsSize('extra')} 
-                                className={isSize === 'extra' ? classes.productBtnActive : classes.productBtn}>ExtraLarge</button>
-                                <button onClick={() => setIsSize('xxl')} 
-                                className={isSize === 'xxl' ? classes.productBtnActive : classes.productBtn}>XXLarge</button>
-                        </div>
-                            <div className={classes.productBlockToggle__FlavorBlock}>
-                                <button onClick={() => setIsCrust('thick')} 
-                                className={isCrust === 'thick' ? classes.productBtnActive : classes.productBtnFlavor}>Thick crust</button>
-                                <button onClick={() => setIsCrust('thin')} 
-                                className={isCrust === 'thin' ? classes.productBtnActive : classes.productBtnFlavor}>Thin</button>
-                                <button onClick={() => setIsCrust('philadelphia')} 
-                                className={isCrust === 'philadelphia' ? classes.productBtnActive : classes.productBtnFlavor}>Philadelphia</button>
-                                <button onClick={() => setIsCrust('hot-dog')} 
-                                className={isCrust === 'hot-dog' ? classes.productBtnActive : classes.productBtnFlavor}>Hot-Dog crust</button>
-                            </div>
+                        <ProductBlockDetailsCol/>
+                        <ProductBlockToggle__FlavorBlock/>
+                            
                         
                         <div className={classes.productBlockPriceRow}>
                             <div className={classes.productBlockPriceBlock}>
                                 <div className={classes.productPrice}>{(() => {
-                                    if (`${sizeValue}` === 'standard,thick') {
+                                    if (`${SizeValue}` === 'standard,thick') {
                                     return (
                                         (isPrice = product.price_1)
                                     )
-                                    } else if (`${sizeValue}` === 'standard,thin') {
+                                    } else if (`${SizeValue}` === 'standard,thin') {
                                     return (
                                         (isPrice = product.price_1)
                                     )
-                                    } else if (`${sizeValue}` === 'standard,philadelphia') {
+                                    } else if (`${SizeValue}` === 'standard,philadelphia') {
                                     return (
                                         (isPrice = product.price_2)
                                     )
-                                    } else if (`${sizeValue}` === 'standard,hot-dog') {
+                                    } else if (`${SizeValue}` === 'standard,hot-dog') {
                                         return(
                                             (isPrice = product.price_3)
                                         )
-                                    } else if (`${sizeValue}` === 'large,thick') {
+                                    } else if (`${SizeValue}` === 'large,thick') {
                                         return(
                                             (isPrice = product.price_4)
                                         )
-                                    } else if (`${sizeValue}` === 'large,thin') {
+                                    } else if (`${SizeValue}` === 'large,thin') {
                                         return(
                                             (isPrice = product.price_4)
                                         )
-                                    } else if (`${sizeValue}` === 'large,philadelphia') {
+                                    } else if (`${SizeValue}` === 'large,philadelphia') {
                                         return (
                                             (isPrice = product.price_5)
                                         )
-                                    } else if (`${sizeValue}` === 'large,hot-dog') {
+                                    } else if (`${SizeValue}` === 'large,hot-dog') {
                                         return(
                                             (isPrice = product.price_6)
                                         )
-                                    } else if (`${sizeValue}` === 'extra,thick') {
+                                    } else if (`${SizeValue}` === 'extra,thick') {
                                         return(
                                             (isPrice = product.price_7)
                                         )
-                                    } else if (`${sizeValue}` === 'extra,thin') {
+                                    } else if (`${SizeValue}` === 'extra,thin') {
                                         return(
                                             (isPrice = product.price_7)
                                         )
-                                    } else if (`${sizeValue}` === 'extra,philadelphia') {
+                                    } else if (`${SizeValue}` === 'extra,philadelphia') {
                                         return(
                                             (isPrice = product.price_8)
                                         )
-                                    } else if (`${sizeValue}` === 'extra,hot-dog') {
+                                    } else if (`${SizeValue}` === 'extra,hot-dog') {
                                         return(
                                             (isPrice = product.price_9)
                                         )
-                                    } else if (`${sizeValue}` === 'xxl,thick') {
+                                    } else if (`${SizeValue}` === 'xxl,thick') {
                                         return(
                                             (isPrice = product.price_10)
                                         ) 
-                                    } else if (`${sizeValue}` === 'xxl,thin') {
+                                    } else if (`${SizeValue}` === 'xxl,thin') {
                                         return(
                                             (isPrice = product.price_10)
                                         )
-                                    } else if (`${sizeValue}` === 'xxl,philadelphia') {
+                                    } else if (`${SizeValue}` === 'xxl,philadelphia') {
                                         return(
                                             (isPrice = product.price_11)
                                         )
-                                    } else if (`${sizeValue}` === 'xxl,hot-dog') {
+                                    } else if (`${SizeValue}` === 'xxl,hot-dog') {
                                         return (
                                             (isPrice = product.price_12)
                                         )

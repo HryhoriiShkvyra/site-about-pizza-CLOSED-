@@ -11,7 +11,6 @@ import News from "../../Components/news/News";
 export const Drinks = ({isItemsCount, setIsItemsCount}) => {
     return(
         <div className={classes.container}>
-            <News/>
         </div>
     )
 }
