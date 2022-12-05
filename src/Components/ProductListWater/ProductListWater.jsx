@@ -1,14 +1,12 @@
 import React from "react";
-import ProductBlock from "../ProductBlock/ProductBlock";
-import classes from './ProductList.module.css';
-import { productListPizzaBestPrice } from '../../Data/Data';
-import { productListPizzaHeroes } from '../../Data/Data';
+import classes from './ProductListWater.module.css';
+import { ProductListWater } from '../../Data/Data'
+import ProductWater from '../ProductWater/ProductWater'
 
-const ProductList = ({ title, titleSecond }) => {
+const ProductList = ({ title }) => {
 
     
 
-console.log(productListPizzaHeroes)
 
     return(
         <div>
@@ -20,14 +18,14 @@ console.log(productListPizzaHeroes)
                 </div>
             </div>
            <div className={classes.containerProductList}>
-                {productListPizzaBestPrice.map(product => 
+                {ProductListWater.map(product => 
                     <div key={product.id}>
-                        <ProductBlock product={product}/>
+                        <ProductWater product={product}/>
                     </div>
                 )} 
             </div>
             
-            <div className={classes.productListTitle}>
+            {/* <div className={classes.productListTitle}>
                 <div>{titleSecond}</div>
                 <div className={classes.productListTitleInfo}>
                     <i class="fa-solid fa-circle-exclamation"></i>
@@ -39,7 +37,7 @@ console.log(productListPizzaHeroes)
                         <ProductBlock product={product}/>
                     </div>
                 )}
-            </div>
+            </div> */}
             
         </div>
     );

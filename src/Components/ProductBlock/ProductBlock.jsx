@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import classes from './ProductBlock.module.css';
 import PizzaManhattan from '../../Assets/pizza/card/Pizza Manhattan.png';
-import { ProductBlockDetailsCol, sizeValue } from '../ProductButtons/ProductButtons';
-import { ProductBlockToggle__FlavorBlock } from '../ProductButtons/ProductButtons';
-import { SizeValue } from '../../Components/ProductButtons/ProductButtons'
-// import Pizza from '../../Assets/pizza/Pineapple on pizza.jpg'
 
 
-const ProductBlock = ({isItemsCount, setIsItemsCount, product, price}) => {
+const ProductBlock = ({ product }) => {
 
+    const [isSize, setIsSize] = useState('standard')
+    const [isCrust, setIsCrust] = useState('thick')
+    const SizeValue = [isSize, isCrust]
     let isPrice = '0'
 
     const [count, setCount] = useState(0)
@@ -19,12 +18,11 @@ const ProductBlock = ({isItemsCount, setIsItemsCount, product, price}) => {
     function decrease() {
         setCount(count - 1)
         console.log('count - 1');
-
     };
 
-    isSize = ProductBlockDetailsCol.isSize;
+    // isSize = ProductBlockDetailsCol.isSize;
 
-    setIsItemsCount(isItemsCount + count)
+    // setIsItemsCount(isItemsCount + count)
     
 
 
@@ -38,10 +36,26 @@ const ProductBlock = ({isItemsCount, setIsItemsCount, product, price}) => {
                     <div className={classes.productToppings}>{product.ingredients}</div>
                     <a className={classes.productReplaceableProd}>Replace ingredients</a>
                     <div className={classes.productBlockDetails}>
-                        <ProductBlockDetailsCol/>
-                        <ProductBlockToggle__FlavorBlock/>
-                            
-                        
+                        <div className={classes.productBlockDetailsCol}>
+                            <button onClick={() => setIsSize('standard')} 
+                            className={isSize === 'standard' ? classes.productBtnActive : classes.productBtn}>Standard  size</button>
+                            <button onClick={() => setIsSize('large')} 
+                            className={isSize === 'large' ? classes.productBtnActive : classes.productBtn}>Large</button>
+                            <button onClick={() => setIsSize('extra')} 
+                            className={isSize === 'extra' ? classes.productBtnActive : classes.productBtn}>ExtraLarge</button>
+                            <button onClick={() => setIsSize('xxl')} 
+                            className={isSize === 'xxl' ? classes.productBtnActive : classes.productBtn}>XXLarge</button>
+                        </div>
+                        <div className={classes.productBlockToggle__FlavorBlock}>
+                            <button onClick={() => setIsCrust('thick')} 
+                            className={isCrust === 'thick' ? classes.productBtnActive : classes.productBtn}>Thick crust</button>
+                            <button onClick={() => setIsCrust('thin')} 
+                            className={isCrust === 'thin' ? classes.productBtnActive : classes.productBtn}>Thin</button>
+                            <button onClick={() => setIsCrust('philadelphia')} 
+                            className={isCrust === 'philadelphia' ? classes.productBtnActive : classes.productBtn}>Philadelphia</button>
+                            <button onClick={() => setIsCrust('hot-dog')} 
+                            className={isCrust === 'hot-dog' ? classes.productBtnActive : classes.productBtn}>Hot-Dog crust</button>
+                        </div>                        
                         <div className={classes.productBlockPriceRow}>
                             <div className={classes.productBlockPriceBlock}>
                                 <div className={classes.productPrice}>{(() => {

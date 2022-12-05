@@ -1,9 +1,7 @@
 import React from "react";
+import classes from './Pizza.module.css'
 import News from "../../Components/news/News";
 import ProductList from "../../Components/ProductList/ProductList";
-import classes from './Pizza.module.css'
-
-
 
 export const Pizza = ({isItemsCount, setIsItemsCount, navBarActive, setNavBarActive}) => {
     return(
@@ -14,7 +12,7 @@ export const Pizza = ({isItemsCount, setIsItemsCount, navBarActive, setNavBarAct
                 null
 
             }
-            <ProductList title={'Pizza Best price'} isItemsCount={isItemsCount} setIsItemsCount={setIsItemsCount}/>
+            <ProductList title={'Pizza Best price'} titleSecond={'same title'}/>
         </div>
     );
 };
