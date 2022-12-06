@@ -1,12 +1,12 @@
 import React from "react";
-import classes from './ProductListWater.module.css';
-import { ProductListWater } from '../../Data/Data'
-import ProductWater from '../ProductWater/ProductWater'
+import classes from './ProductListSides.module.css';
+import { ProductListComboBoxes } from '../../Data/Data'
+import { ProductListBread } from '../../Data/Data'
+import ProductSides from '../ProductSides/ProductSides'
 
-const ProductList = ({ title }) => {
+const ProductListSides = ({ title, titleSecond}) => {
 
     
-
 
     return(
         <div>
@@ -18,30 +18,30 @@ const ProductList = ({ title }) => {
                 </div>
             </div>
            <div className={classes.containerProductList}>
-                {ProductListWater.map(product => 
+                {ProductListComboBoxes.map(product => 
                     <div key={product.id}>
-                        <ProductWater product={product}/>
+                        <ProductSides product={product}/>
                     </div>
                 )} 
             </div>
             
-            {/* <div className={classes.productListTitle}>
+            <div className={classes.productListTitle}>
                 <div>{titleSecond}</div>
                 <div className={classes.productListTitleInfo}>
                     <i class="fa-solid fa-circle-exclamation"></i>
                 </div>
             </div>
             <div className={classes.containerProductList}>
-               {productListPizzaHeroes.map(product => 
+               {ProductListBread.map(product => 
                     <div key={product.id}>
-                        <ProductBlock product={product}/>
+                        <ProductSides product={product}/>
                     </div>
                 )}
-            </div> */}
+            </div>
             
         </div>
     );
 };
 
 
-export default ProductList;
+export default ProductListSides;

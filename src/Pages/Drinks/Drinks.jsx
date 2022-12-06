@@ -1,13 +1,13 @@
 import React from "react";
 import classes from './Drinks.module.css'
-import ProductListWater from "../../Components/ProductListWater/ProductListWater";
+import ProductListDrinks from "../../Components/ProductListDrinks/ProductListDrinks";
 
 
 
 export const Drinks = ({isItemsCount, setIsItemsCount}) => {
     return(
         <div className={classes.container}>
-            <ProductListWater title={'Water'}/>
+            <ProductListDrinks title={'Water'}/>
         </div>
     )
 }

@@ -9,8 +9,26 @@ import pizzaGrillMix from '../Assets/pizza/pizzaGrillMix.jpg';
 import pizzaCarbonara from '../Assets/pizza/pizzaCarbonara.jpg';
 import pizzaCountry from '../Assets/pizza/pizzaCountry.jpg';
 
-import bonAquaCarbonatedWater from '../Assets/drinks/bonAquaCarbonatedWater.png'
-import bonAquaStillWater from '../Assets/drinks/bonAquaStillWater.png'
+
+import bonAquaCarbonatedWater from '../Assets/drinks/bonAquaCarbonatedWater.png';
+import bonAquaStillWater from '../Assets/drinks/bonAquaStillWater.png';
+
+
+import comboBox from '../Assets/sides/Combo-box.jpg';
+import comboBoxFries from '../Assets/sides/Combo-box fries.jpg';
+import largePotatoBox from '../Assets/sides/Large Potato Box.jpg';
+import setOfSauces from '../Assets/sides/Set of Sauces.jpg';
+
+
+import breadWithPulledBeefAndOnion from '../Assets/sides/Bread with pulled beef and onion.jpg';
+import breadWithHamAndMushrooms from '../Assets/sides/Bread with ham and mushrooms.jpg';
+import breadWithPepperoniMunichSausagesAndMustard from '../Assets/sides/Bread with pepperoni, munich sausages and mustard.jpg';
+import breadWithBavarianSausagesAndTomatoes from '../Assets/sides/Bread with bavarian sausages and tomatoes.jpg';
+import breadWithSpinachAndFeta from '../Assets/sides/Bread with spinach and feta.jpg';
+import breadWithBaconAndJalapenos from '../Assets/sides/Bread with bacon and jalapenos.jpg';
+import cheeseBread from '../Assets/sides/Сheese bread.jpg';
+import parmesanBites from '../Assets/sides/Parmesan bites.jpg'
+
 
 
 export const productListPizzaBestPrice = ([
@@ -120,12 +138,103 @@ export const productListPizzaHeroes = ([
 
 export const ProductListWater = ([
 
-    {   id: 'BonAqua carbonated water',
-        title: 'BonAqua carbonated water',
+    {   id: 'BonAquaCarbonatedWater',
+        title: 'BonAqua Carbonated Water',
         photo: bonAquaCarbonatedWater,
+        capacity_1: '500ml'
     },
-    {   id: 'BonAqua still water',
+    {   id: 'BonAquaStillWater',
         title: 'BonAqua still water',
         photo: bonAquaStillWater,
+        capacity_1: '500ml',
+    },
+    {   id: 'BonAquaCarbonatedWater',
+        title: 'BonAqua Carbonated Water',
+        photo: bonAquaCarbonatedWater,
+        capacity_1: '330ml',
+        capacity_2: '500ml',
+        capacity_3: '750ml',
+    },
+    {   id: 'BonAquaStillWater',
+        title: 'BonAqua still water',
+        photo: bonAquaStillWater,
+        capacity_1: '330ml',
+        capacity_2: '500ml',
+        capacity_3: '750ml',
+    },
+])
+
+export const ProductListComboBoxes  = ([
+    {id: 'comboBox', 
+    title: 'Combo-box',
+    photo: comboBox,
+    option: 'Standard'
+    },
+    {id: 'comboBoxFries', 
+    title: 'Combo-box Fries',
+    photo: comboBoxFries,
+    option: 'Standard',
+    },
+    {id: 'largePotatoBox', 
+    title: 'Large Potato Box',
+    photo: largePotatoBox,
+    option: 'Standard',
+    },
+    {id: 'setOfSauces', 
+    title: 'Set of sauces (garlic, spicy, barbecue, marinara)',
+    photo: setOfSauces,
+    option: 'DIP'
+    },
+]);
+
+export const ProductListBread = ([
+    {
+        id: 'breadWithPulledBeefAndOnion',
+        title: 'Bread with pulled beef and onion',
+        photo: breadWithPulledBeefAndOnion,
+        option: 'standard',
+    },
+    {
+        id: 'breadWithHamAndMushrooms',
+        title: 'Bread with ham and mushrooms',
+        photo: breadWithHamAndMushrooms,
+        option: 'standard',
+    },
+    {
+        id: 'breadWithPepperoniMunichSausagesAndMustard',
+        title: 'Bread with pepperoni, munich sausages and mustard',
+        photo: breadWithPepperoniMunichSausagesAndMustard,
+        option: 'standard',
+    },
+    {
+        id: 'breadWithBavarianSausagesAndTomatoes',
+        title: 'Bread with bavarian sausages and tomatoes',
+        photo: breadWithBavarianSausagesAndTomatoes,
+        option: 'standard',
+    },
+    {
+        id: 'breadWithSpinachAndFeta',
+        title: 'Bread with spinach and feta',
+        photo: breadWithSpinachAndFeta,
+        option: 'standard',
+    },
+    {
+        id: 'breadWithBaconAndJalapenos',
+        title: 'Bread with bacon and jalapenos',
+        photo: breadWithBaconAndJalapenos,
+        option: 'standard',
+    },
+    {
+        id: 'cheeseBread',
+        title: 'Сheese bread',
+        photo: cheeseBread,
+        option: 'standard',
+    },
+    {
+        id: 'parmesanBites',
+        title: 'Parmesan bites',
+        photo: parmesanBites,
+        option: 'Double',
+        optionSecond: 'Standard',
     },
 ])

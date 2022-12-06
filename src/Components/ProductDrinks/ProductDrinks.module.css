@@ -1,0 +1,166 @@
+.productBlockInner {
+    padding: 0.63rem;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 1rem;
+}
+
+.productBlock {
+    background-color: white;
+    border-radius: 1rem;
+    transition: 600ms all;
+
+}
+
+.productBlock:hover {
+    -webkit-box-shadow: 0px 0px 50px 8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 50px 8px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 50px 8px rgba(0,0,0,0.75);
+    transition: 600ms all;
+}
+
+.productImageBlock {
+    height: 200px;
+    overflow: hidden;
+
+}
+
+.productImage {
+    width: 300px;
+    margin-top: -60px;
+    transition: transform .7s;
+
+}
+
+.productImage:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.05); 
+}
+
+
+.productTitle {
+    padding-left: 0.3rem;
+    font-size: 1rem;
+}
+
+.productBlockDetailsCol{
+    width: 100%;
+    height: 31px;
+    margin-top: 10px;
+    /* text-align: center; */
+    
+
+    background-color: rgb(236, 236, 236);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 20px;
+
+}
+
+.productBtn {
+    width: 33.3%;
+    padding: 7px 0;
+    margin-top: -3px;
+    font-size: 13px;
+    background-color: rgb(236, 236, 236);
+    border-radius: 20px;
+}
+
+.productBtnActive {
+    width: 33.3%;
+    padding: 7px 0;
+
+    font-size: 13px;
+    color: #fff;
+    background-color: #666;
+
+    border-radius: 20px;
+
+    transition: 400ms all
+}
+
+.productBtnActiveSolo{
+    width: 100%;
+    margin-top: 10px;
+    padding: 7px 0;
+    font-size: 13px;
+    color: #fff;
+    background-color: #666;
+
+    border-radius: 20px;
+
+    transition: 400ms all
+}
+
+
+.productBlockPriceRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+    font-weight: 700;
+}
+
+.productBlockPriceBlock {
+    display: flex;
+    margin: 10px 0 0 10px;
+    
+}
+
+
+.productBlockWrap {
+    width: 138px;
+    height: 3rem;
+    margin: -8px 0px 0 20px; 
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: rgb(201, 53, 53);
+    border-radius: 1rem;
+}
+
+.productBlockWrap:hover {
+    background-color: rgb(155, 50, 50);
+}
+
+
+.increaseDecreaseBtns{
+    display: flex;
+    width: 138px;
+    height: 48px;
+
+    margin: -8px 0 0 10px; 
+
+    background-color: rgba(237, 237, 237, 0.671);
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 16px;
+}
+
+
+
+.increase {
+    width: 48px;
+    height: 48px;
+    margin: -1px 0 0 19px;
+
+    font-size: 18px;
+
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 15px;
+
+}
+
+.decrease {
+    width: 48px;
+    height: 48px;
+    margin: -1px 0 0 -2px;
+
+    font-size: 18px;
+
+
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 15px;
+
+}
+
+.count {
+    margin: 9px 0 0 20px;
+}

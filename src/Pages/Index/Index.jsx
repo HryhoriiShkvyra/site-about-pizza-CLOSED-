@@ -6,6 +6,7 @@ import { Drinks } from "../Drinks/Drinks";
 import { useScrollPosition } from "../../Components/Hooks/useScrollPosition";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Pizza } from "../Pizza/Pizza";
+import Sides from '../Sides/Sides'
 import Checkout from "../Checkout/Checkout";
 
 import classes from './Index.module.css'
@@ -91,45 +92,18 @@ export const Index = () => {
                             <Route path="/" element={<Pizza 
                             isItemsCount={isItemsCount} setIsItemsCount={setIsItemsCount}
                             navBarActive={navBarActive} setNavBarActive={setNavBarActive}/>}/>
-                            <Route path="/Drinks" element={<Drinks 
-                            isItemsCount={isItemsCount} setIsItemsCount={setIsItemsCount}
-                            />}/>
+                            <Route path="/Drinks" element={<Drinks/>}/>
+                            <Route path="/Sides" element={<Sides/>}/>
+                            <Route path="/Dessert" element={<Dessert/>}/>
+
                             <Route path="/Checkout" element={<Checkout/>}/>
                         </Routes>   
                     </Router>
                 
                 
             </div>
-            {/* <div className={classes.mainSpace}>
-                <div className={classNames=(scrollPosition > 50 ? classes.sticky : '')}>
-                    <div className={classes.mainHeader}>
-                        <div className={classes.container}>
-                            <div className={classes.mainHeaderInner}>
-                                <div className={classes.logo}>
-                                    <i class="fa-solid fa-square"></i>
-                                    Fake Pizza
-                                </div>
-                                <nav className={classes.nav}>
-
-                                  
-                                </nav>
-                                <div className={classes.checkoutField}>
-                                    <button className={classes.cartBtn}>
-                                        <div>00</div>
-                                        <i className="fa-solid fa-cart-shopping"></i>
-                                    </button>
-                                    <button className={classes.checkoutBtn}>Checkout</button>
-                                </div>
-                                    <button onClick={showMenuBtn} ><i className="fa-solid fa-bars" ></i></button>
-                                    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
+           
             <SideMenu isOpenSideMenu={isOpenSideMenu}/>
-            {/* <News/> */}
-            {/* <ProductList title={'Best Price'}/> */}
                
         </div>
         
