@@ -14,7 +14,7 @@ const ProductDrinks = ({product}) => {
         setIsCount(isCount - 1)
     }
 
-    console.log(product.capacity_1)
+    // console.log(product.capacity_1)
     return(
         <div>
              <div className={classes.productBlock}>

@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import classes from './ProductSides.module.css';
+import classes from './ProductDessert.module.css';
 
-const ProductDrinks = ({product}) => {
+const ProductDessert = ({product}) => {
 
     const [isCapacity, setIsCapacity] = useState('Standard')
 
@@ -14,19 +14,16 @@ const ProductDrinks = ({product}) => {
         setIsCount(isCount - 1)
     }
 
-    console.log(product.capacity_1)
     return(
         <div>
              <div className={classes.productBlock}>
                 <div className={classes.productBlockInner}>
                     <div className={classes.productAbout}>
                         <div className={classes.productImageBlock}>
-                            {
-                                product.id === 'setOfSauces' ?
+                            { product.id === 'sweetSauce50g' ?
                                 <img className={classes.productImageSauces} alt='image' src={product.photo}/>
                                 :
                                 <img className={classes.productImage} alt='image' src={product.photo}/>
-
                             }
                         </div>
                         <div className={classes.productTitle}>{product.title}</div>
@@ -85,4 +82,4 @@ const ProductDrinks = ({product}) => {
     );
 };
 
-export default ProductDrinks;
+export default ProductDessert;

@@ -7,6 +7,7 @@ import { useScrollPosition } from "../../Components/Hooks/useScrollPosition";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Pizza } from "../Pizza/Pizza";
 import Sides from '../Sides/Sides'
+import Dessert from '../Dessert/Dessert'
 import Checkout from "../Checkout/Checkout";
 
 import classes from './Index.module.css'
@@ -51,8 +52,8 @@ export const Index = () => {
                                                     className={navBarActive === 'drinks' ? classes.linkActive : classes.link} to='/Drinks' >Drinks</Link>
                                                 <Link onClick={() => setNavBarActive('sides')} 
                                                     className={navBarActive === 'sides' ? classes.linkActive : classes.link} to='/Sides' >Sides</Link>
-                                                <Link onClick={() => setNavBarActive('desserts')}
-                                                    className={navBarActive === 'desserts' ? classes.linkActive : classes.link} to='/Desserts' >Dessert</Link>
+                                                <Link onClick={() => setNavBarActive('dessert')}
+                                                    className={navBarActive === 'dessert' ? classes.linkActive : classes.link} to='/Dessert' >Dessert</Link>
                                             </div>
                                             <Link className={classes.checkoutBlockLink} to='/Checkout'>
                                                 <div className={isItemsCount === 0 ? classes.checkoutBlock : classes.checkoutBlockActive}>

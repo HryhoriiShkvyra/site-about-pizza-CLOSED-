@@ -27,8 +27,18 @@ import breadWithBavarianSausagesAndTomatoes from '../Assets/sides/Bread with bav
 import breadWithSpinachAndFeta from '../Assets/sides/Bread with spinach and feta.jpg';
 import breadWithBaconAndJalapenos from '../Assets/sides/Bread with bacon and jalapenos.jpg';
 import cheeseBread from '../Assets/sides/Сheese bread.jpg';
-import parmesanBites from '../Assets/sides/Parmesan bites.jpg'
+import parmesanBites from '../Assets/sides/Parmesan bites.jpg';
 
+
+import apricotRolls from '../Assets/dessert/Apricot rolls.jpg';
+import cherryRolls from '../Assets/dessert/Cherry rolls.jpg';
+import creamCheeseRolls from '../Assets/dessert/Cream cheese rolls.jpg';
+import chocolateRolls from '../Assets/dessert/Chocolate rolls.jpg';
+import coconutMuffin from '../Assets/dessert/Coconut Muffin.jpeg';
+import latteMuffinWithMarshmallows from '../Assets/dessert/Latte muffin with marshmallows.jpg';
+import lavaCake from '../Assets/dessert/Lava Cake.jpg';
+import cinnamonBites from '../Assets/dessert/Сinnamon Bites.jpg';
+import sweetSauce50g from '../Assets/dessert/Sweet sauce 50g.jpg';
 
 
 export const productListPizzaBestPrice = ([
@@ -236,5 +246,63 @@ export const ProductListBread = ([
         photo: parmesanBites,
         option: 'Double',
         optionSecond: 'Standard',
+    },
+])
+
+export const ProductListDesserts = ([
+    {
+        id: 'apricotRolls',
+        title: 'Apricot Rolls',
+        photo: apricotRolls,
+        option: 'Standard',
+    },
+    {
+        id: 'cherryRolls',
+        title: 'Cherry Rolls',
+        photo: cherryRolls,
+        option: 'Standard',
+    },
+    {
+        id: 'creamCheeseRolls',
+        title: 'Cream Cheese Rolls',
+        photo: creamCheeseRolls,
+        option: 'Standard',
+    },
+    {
+        id: 'chocolateRolls',
+        title: 'Chocolate Rolls',
+        photo: chocolateRolls,
+        option: 'Standard',
+    },
+    {
+        id: 'coconutMuffin',
+        title: 'Coconut Muffin',
+        photo: coconutMuffin,
+        option: 'Standard',
+    },
+    {
+        id: 'latteMuffinWithMarshmallows',
+        title: 'Latte Muffin With Marshmallows',
+        photo: latteMuffinWithMarshmallows,
+        option: 'Standard',
+    },
+    {
+        id: 'lavaCake',
+        title: 'Lava Cake',
+        photo: lavaCake,
+        option: 'Standard',
+    },
+    {
+        id: 'cinnamonBites',
+        title: 'Cinnamon Bites',
+        photo: cinnamonBites,
+        option: 'Double',
+        optionSecond: 'Double',
+    },
+    {
+        id: 'sweetSauce50g',
+        title: 'Sweet Sauce 50g',
+        photo: sweetSauce50g,
+        option: 'DIP',
     },
 ])

@@ -1,15 +1,15 @@
 import React from "react";
-import classes from './Sides.module.css'
-import ProductListSides from "../../Components/ProductListSides/ProductListSide";
+import classes from './Dessert.module.css'
+import ProductListDessert from "../../Components/ProductListDessert/ProductListDessert";
 
 
 
-const Sides = () => {
+const Dessert = () => {
     return(
         <div className={classes.container}>
-            <ProductListSides title={'Combo-box'} titleSecond={'Bread'}/>
+            <ProductListDessert/>
         </div>
     );
 };
 
-export default Sides;
+export default Dessert;
