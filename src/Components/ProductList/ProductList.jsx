@@ -4,7 +4,7 @@ import classes from './ProductList.module.css';
 import { productListPizzaBestPrice } from '../../Data/Data';
 import { productListPizzaHeroes } from '../../Data/Data';
 
-const ProductList = ({ title, titleSecond }) => {
+const ProductList = ({ title, titleSecond, navBarActive }) => {
 
     
 

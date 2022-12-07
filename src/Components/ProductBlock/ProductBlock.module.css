@@ -21,6 +21,7 @@
 .productImage {
     width: 18.3125rem;
     height: 11.1875rem;
+    position: relative;
     aspect-ratio: 16/9;
     border-radius: 1rem;
 
@@ -31,6 +32,24 @@
     -ms-transform: scale(1.5); /* IE 9 */
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.01); 
+}
+
+.productMarkBlock {
+    width: 35.5px;
+    height: 35.5px;
+    position: absolute;
+    margin: -170px 0px 0 250px;
+    z-index: 5  ;
+
+    background-color: #fff;    
+    border: 1px solid #e31837;
+    border-radius: 20px;
+}
+
+.productMark {
+    height: 20px;
+    margin: 7px 0 0 7px;
+    
 }
 
 

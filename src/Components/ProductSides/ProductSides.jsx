@@ -28,6 +28,14 @@ const ProductDrinks = ({product}) => {
                                 <img className={classes.productImage} alt='image' src={product.photo}/>
 
                             }
+                            { product.markValue === true ? 
+                            <div className={classes.productMarkBlock}>
+                                <img className={classes.productMark} src={product.mark}/>
+                            </div>
+                            :
+                            null
+                        
+                            }
                         </div>
                         <div className={classes.productTitle}>{product.title}</div>
                     </div>

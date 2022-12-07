@@ -12,7 +12,7 @@ export const Pizza = ({isItemsCount, setIsItemsCount, navBarActive, setNavBarAct
                 null
 
             }
-            <ProductList title={'Pizza Best price'} titleSecond={'same title'}/>
+            <ProductList title={'Pizza Best price'} titleSecond={'same title'} navBarActive={navBarActive}/>
         </div>
     );
 };

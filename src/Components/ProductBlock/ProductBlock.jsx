@@ -8,7 +8,7 @@ const ProductBlock = ({ product }) => {
     const [isSize, setIsSize] = useState('standard')
     const [isCrust, setIsCrust] = useState('thick')
     const SizeValue = [isSize, isCrust]
-    let isPrice = '0'
+    let isPrice = '0'   
 
     const [count, setCount] = useState(0)
     function increase() {
@@ -32,6 +32,14 @@ const ProductBlock = ({ product }) => {
             <div className={classes.productBlock}>
                 <div className={classes.productBlockInner}>
                     <img className={classes.productImage} alt='image' src={product.photo} />
+                    { product.markValue === true ? 
+                        <div className={classes.productMarkBlock}>
+                            <img className={classes.productMark} src={product.mark}/>
+                        </div>
+                        :
+                        null
+                    
+                    }
                     <div className={classes.productTitle}>{product.title}</div>
                     <div className={classes.productToppings}>{product.ingredients}</div>
                     <a className={classes.productReplaceableProd}>Replace ingredients</a>

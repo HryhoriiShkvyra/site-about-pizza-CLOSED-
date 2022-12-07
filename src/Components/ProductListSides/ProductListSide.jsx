@@ -27,9 +27,6 @@ const ProductListSides = ({ title, titleSecond}) => {
             
             <div className={classes.productListTitle}>
                 <div>{titleSecond}</div>
-                <div className={classes.productListTitleInfo}>
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                </div>
             </div>
             <div className={classes.containerProductList}>
                {ProductListBread.map(product => 

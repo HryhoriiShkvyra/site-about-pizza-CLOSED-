@@ -25,6 +25,7 @@ const ProductDessert = ({product}) => {
                                 :
                                 <img className={classes.productImage} alt='image' src={product.photo}/>
                             }
+                            <div className={classes.productMark}>{product.mark}</div>
                         </div>
                         <div className={classes.productTitle}>{product.title}</div>
                     </div>
