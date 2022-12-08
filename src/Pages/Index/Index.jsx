@@ -91,7 +91,6 @@ export const Index = () => {
                         </div>
                         <Routes>
                             <Route path="/" element={<Pizza 
-                            isItemsCount={isItemsCount} setIsItemsCount={setIsItemsCount}
                             navBarActive={navBarActive} setNavBarActive={setNavBarActive}/>}/>
                             <Route path="/Drinks" element={<Drinks/>}/>
                             <Route path="/Sides" element={<Sides/>}/>

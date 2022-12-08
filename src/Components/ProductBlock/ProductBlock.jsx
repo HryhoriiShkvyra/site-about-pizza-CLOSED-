@@ -25,8 +25,6 @@ const ProductBlock = ({ product }) => {
     // setIsItemsCount(isItemsCount + count)
     
 
-
-
     return (
         <div >
             <div className={classes.productBlock}>

@@ -1,6 +1,6 @@
 .news {
     width: 70%;
-    height: 34rem;
+    height: 506px;
     margin: 0.6rem auto;
     border-radius: 1.5rem;
     overflow: hidden;
@@ -11,7 +11,6 @@
     height: 31rem;
     overflow: hidden;
     border-radius: 1.5rem;
-    padding-bottom: 2rem;
 }
 
 .image {
