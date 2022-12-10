@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import ProductBlock from "../ProductBlock/ProductBlock";
 import classes from './ProductList.module.css';
 import { productListPizzaBestPrice } from '../../Data/Data';
@@ -6,43 +6,57 @@ import { productListPizzaHeroes } from '../../Data/Data';
 
 const ProductList = ({ title, titleSecond, navBarActive }) => {
 
-    const [sortingIsWindowActive, setSortingIsWindowActive] = useState(false)
-    const sortingWindowActive = () => {
-        setSortingIsWindowActive(sortingIsWindowActive => !sortingIsWindowActive)
-        if(sortingIsWindowActive === false) {
-            console.log('none')
-        } else {
-            console.log('display')
-        };
-    };
+    const [sortWindowActive, setSortWindowActive] = React.useState(false)
 
-    const [isSorting, setIsSorting] = useState(true)
-    // const sorting = () => {
-    //     setIsSorting(sorting => !sorting)
-    //     if(sorting === false) {
-    //         console.log('sorting is true')
-    //     } else {
-    //         console.log('sorting is false')
-    //     };
-    // };
+    
+
+    const sortWindow = () => {
+        setSortWindowActive((active) => !active)
+    } 
+    React.useEffect(() => {
+        console.log(sortWindowActive)
+    },  [sortWindowActive])
 
 
+    let [sortingActive, setSortingActive] = React.useState(false)
+
+    function sortWindowLowToHigh() {
+        setSortingActive(sortingActive = false)
+        console.log('low to high, ', sortingActive)
+    }
+
+    function sortWindowHighToLow() {
+        setSortingActive(sortingActive = true)
+        console.log('high to low, ', sortingActive)
+    }
+    
+    const sortList = () => {
+        setSortingActive((active) => !active)
+        if (sortingActive === true) {
+            console.log('sorting high-low')
+        }  else {
+            console.log('sorting low-high')
+        }                                           
+    }
+  
+ 
 
 
 
     return(
-        <div >
-            <div onClick={sortingWindowActive} className={classes.sortBlock}>
+        <div>
+            <div onClick={sortWindow} className={classes.sortBlock}>
                 <div  className={classes.sort}>
-                    <div  className={classes.sortBtn}>Sort</div>
+                    <div className={classes.sortBtn}>Sort</div>
                     <i style={{left: '215px', top: '6px' , rotate: '270deg', color: '#888', position: 'absolute'}} 
                     class="fa-solid fa-signal"></i>
                 </div> 
-                <div  className={sortingIsWindowActive ? classes.sortWindow : classes.sortWindowNone}>
-                    <button onClick={() => setIsSorting(false)} className={classes.sortWindowBtnFalse}>Price low-high</button>
-                    <button onClick={() => setIsSorting(true)} className={classes.sortWindowBtnTrue}>Price high-low</button>
+                <div className={sortWindowActive ? classes.sortWindowActive : classes.sortWindowNone}>
+                    <button onClick={sortWindowLowToHigh} className={classes.sortWindowBtnFalse}>Price low-high</button>
+                    <button onClick={sortWindowHighToLow} className={classes.sortWindowBtnTrue}>Price high-low</button>
                 </div>              
             </div>
+            
                  
 
             <div className={classes.productListTitle}>
@@ -54,7 +68,16 @@ const ProductList = ({ title, titleSecond, navBarActive }) => {
            
             
             {
-            isSorting ? 
+                sortingActive ? 
+                <div className={classes.containerProductList}>
+                    {productListPizzaBestPrice.sort((a, b) => (a.price_1 > b.price_1) ? -1 : 1).map(product => 
+                        <div key={product.id}>
+                            {/* {product.id} */}
+                            <ProductBlock product={product}/>
+                        </div>
+                    )}
+                </div>
+                :
                 <div className={classes.containerProductList}>
                     {productListPizzaBestPrice.sort((a, b) => (a.price_1 > b.price_1) ? 1 : -1).map(product => 
                         <div key={product.id}>
@@ -62,15 +85,7 @@ const ProductList = ({ title, titleSecond, navBarActive }) => {
                         </div>
                     )}
                 </div>
-                :
-                <div className={classes.containerProductList}>
-                    {productListPizzaBestPrice.sort((a, b) => (a.price_1 > b.price_1) ? -1 : 1).map(product => 
-                        <div key={product.id}>
-                            <ProductBlock product={product}/>
-                        </div>
-                    )}
-                </div>
-           }
+            }
             {/* <div className={classes.containerProductList}>
                 {productListPizzaBestPrice.map(product => 
                     <div key={product.id}>
@@ -85,16 +100,15 @@ const ProductList = ({ title, titleSecond, navBarActive }) => {
                     <i class="fa-solid fa-circle-exclamation"></i>
                 </div>
             </div>
+            {/* <div className={classes.containerProductList}>
+                {productListPizzaHeroes.sort((a, b) => (a.price_1 > b.price_1) ? -1 : 1).map(product => 
+                    <div key={product.id}>
+                        <ProductBlock product={product}/>
+                    </div>
+                )}
+            </div> */}
             {
-            isSorting ? 
-                <div className={classes.containerProductList}>
-                    {productListPizzaHeroes.sort((a, b) => (a.price_1 > b.price_1) ? 1 : -1).map(product => 
-                        <div key={product.id}>
-                            <ProductBlock product={product}/>
-                        </div>
-                    )}
-                </div>
-                :
+            sortingActive ? 
                 <div className={classes.containerProductList}>
                     {productListPizzaHeroes.sort((a, b) => (a.price_1 > b.price_1) ? -1 : 1).map(product => 
                         <div key={product.id}>
@@ -102,7 +116,15 @@ const ProductList = ({ title, titleSecond, navBarActive }) => {
                         </div>
                     )}
                 </div>
-           }
+                :
+                <div className={classes.containerProductList}>
+                    {productListPizzaHeroes.sort((a, b) => (a.price_1 > b.price_1) ? 1 : -1).map(product => 
+                        <div key={product.id}>
+                            <ProductBlock product={product}/>
+                        </div>
+                    )}
+                </div>
+            }
             
         </div>
     );

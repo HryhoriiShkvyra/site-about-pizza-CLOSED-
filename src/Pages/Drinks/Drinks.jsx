@@ -7,7 +7,7 @@ import ProductListDrinks from "../../Components/ProductListDrinks/ProductListDri
 export const Drinks = ({isItemsCount, setIsItemsCount}) => {
     return(
         <div className={classes.container}>
-            <ProductListDrinks title={'Water'}/>
+            <ProductListDrinks title={'Water'} titleSecond={'Tea'}/>
         </div>
     )
 }

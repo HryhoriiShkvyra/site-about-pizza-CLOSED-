@@ -4,55 +4,78 @@ import classes from './ProductDrinks.module.css';
 
 const ProductDrinks = ({product}) => {
 
-    const [isCapacity, setIsCapacity] = useState('330')
+    const [isCapacity, setIsCapacity] = useState('500ml');
+    let isPrice = 0; 
+
 
     const [isCount, setIsCount] = useState(0)
     function increase () {
         setIsCount(isCount + 1)
-    }
+    };
     function decrease () {
         setIsCount(isCount - 1)
-    }
+    };
 
-    console.log(product.capacity_1)
+    // console.log(product.capacity_1)
     return(
         <div>
              <div className={classes.productBlock}>
                 <div className={classes.productBlockInner}>
                     <div className={classes.productAbout}>
-                        <div className={classes.productImageBlock}>
-                        <img className={classes.productImage} alt='image' src={product.photo} />
-                        { product.markValue === true ? 
-                            <div className={classes.productMarkBlock}>
-                                <img className={classes.productMark} src={product.mark}/>
-                            </div>
+                        <div classN ame={classes.productImageBlock}>
+                            {product.option_1 === '500ml' 
+                            ?
+                            <img className={classes.productImage} alt='image' src={product.photo} />
                             :
-                            null
-                        
-                        }
-                        </div>
-                        <div className={classes.productTitle}>{product.title}</div>
-                    </div>
-                    <div className={classes.productDescription}>
-                        <div className={classes.productBlockDetails}>
-                            {product.capacity_1 === '330ml' ?
-                                <div className={classes.productBlockDetailsCol}>
-                                    <button onClick={() => setIsCapacity('330')} 
-                                    className={isCapacity === '330' ? classes.productBtnActive : classes.productBtn}>330ml</button>
-                                    <button onClick={() => setIsCapacity('500')} 
-                                    className={isCapacity === '500' ? classes.productBtnActive : classes.productBtn}>500ml</button>
-                                    <button onClick={() => setIsCapacity('750')} 
-                                    className={isCapacity === '750' ? classes.productBtnActive : classes.productBtn}>750ml</button>
+                            <img className={classes.productImageTea} alt='image' src={product.photo} />
+
+                            }
+                            { product.markValue === true ? 
+                                <div className={classes.productMarkBlock}>
+                                    <img className={classes.productMark} src={product.mark}/>
                                 </div>
                                 :
-                                <button className={classes.productBtnActiveSolo}>500ml</button>
+                                null
+                            
+                            }
+                        </div>
+                    </div>
+                    <div className={classes.productTitle}>{product.title}</div>
 
-                               
+                    <div className={classes.productDescription}>
+                        <div className={classes.productBlockDetails}>
+                            {product.option_1 === '1500ml' ?
+                                <div className={classes.productBlockDetailsCol}>
+                                    <button onClick={() => setIsCapacity('500ml')} 
+                                    className={isCapacity === '500ml' ? classes.productBtnActive : classes.productBtn}>500ml</button>
+                                    <button onClick={() => setIsCapacity('1000ml')} 
+                                    className={isCapacity === '1000ml' ? classes.productBtnActive : classes.productBtn}>1000ml</button>
+                                    <button onClick={() => setIsCapacity('1500ml')} 
+                                    className={isCapacity === '1500ml' ? classes.productBtnActive : classes.productBtn}>1500ml</button>
+                                </div>
+                                :
+                                <button className={classes.productBtnActiveSolo}>500ml</button>                               
                             }
                             <div className={classes.productBlockPriceRow}>
                             <div className={classes.productBlockPriceBlock}>
                                 <div className={classes.productPrice}>
-                                   30
+                                   {(() => {
+                                    if (isCapacity === ('500ml')) {
+                                        return(
+                                            (isPrice = product.price_1)
+                                        ) 
+                                    } else if  (isCapacity ==='1000ml') {
+                                        return(
+                                            (isPrice = product.price_2)
+                                        )
+                                    }   else if (isCapacity === '1500ml') {
+                                        return(
+                                            (isPrice = product.price_3)
+                                        )
+                                    }
+                                   })()}
+
+                               
                                 </div>
                                 <div>uah</div>
                             </div>

@@ -1,12 +1,12 @@
 .productBlockInner {
     padding: 0.63rem;
-    border-radius: 1rem;
+
 }
 
 .productBlock {
     height: 360px;
     background-color: white;
-    border-radius: 1rem;
+    border-radius: 25px;
     transition: 600ms all;
     -webkit-box-shadow: 0px 0px 20px 1px rgba(153,153,153,1);
     -moz-box-shadow: 0px 0px 20px 1px rgba(153,153,153,1);
@@ -21,7 +21,9 @@
     transition: 600ms all;
 }
 
-.productImageBlock {
+
+
+.productAbout {
     height: 200px;
     overflow: hidden;
 
@@ -29,16 +31,23 @@
 
 .productImage {
     width: 300px;
-    margin-top: -60px;
+    margin-top: -40px;
     transition: transform .7s;
 
 }
 
-.productImage:hover {
+.productImageTea {
+    width: 200px;
+    margin-left: 50px;
+    transition: transform .7s;
+}
+
+.productImage:hover, productImageTea:hover {
     -ms-transform: scale(1.5); /* IE 9 */
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.05); 
 }
+
 
 .productMarkBlock {
     width: 35.5px;
@@ -60,7 +69,9 @@
 
 .productTitle {
     padding-left: 0.3rem;
-    font-size: 1rem;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
 }
 
 .productBlockDetailsCol{

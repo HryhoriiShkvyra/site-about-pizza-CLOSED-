@@ -17,6 +17,9 @@ import pizzaCountry from '../Assets/pizza/pizzaCountry.jpg';
 
 import bonAquaCarbonatedWater from '../Assets/drinks/bonAquaCarbonatedWater.png';
 import bonAquaStillWater from '../Assets/drinks/bonAquaStillWater.png';
+import shengPuerDragonEggWithYellowChrysanthemum2016 from '../Assets/drinks/shen-pu-jer-drakone-jajco-s-zheltoj-hrizantemoj-2016g-0.jpg'
+import shengPuerDragonEggWithWhiteChrysanthemum2016 from '../Assets/drinks/shen-pu-jer-drakone-jajco-s-beloj-hrizantemoj-2016g-0.jpg'
+import shengPuerLollipopFromTheMountainsOfIU from '../Assets/drinks/shen-pu-jer-lolipop-s-gor-iu-2016g-0.jpg'
 
 
 import comboBox from '../Assets/sides/Combo-box.jpg';
@@ -124,7 +127,6 @@ export const productListPizzaBestPrice = ([
     price_12: '439',
     },
 ])
-
 
 export const productListPizzaHeroes = ([
     {id: 'pizzaTonyPepperoni',
@@ -238,55 +240,84 @@ export const ProductListWater = ([
         photo: bonAquaCarbonatedWater,
         mark: plus18,
         markValue: true,
-        capacity_1: '500ml',
+        option_1: '500ml',
+        price_1: 38,
     },
     {   id: 'BonAquaStillWater',
         title: 'BonAqua still water',
         photo: bonAquaStillWater,
         mark: plus18,
         markValue: true,
-        capacity_1: '500ml',
-    },
-    {   id: 'BonAquaCarbonatedWater',
-        title: 'BonAqua Carbonated Water',
-        photo: bonAquaCarbonatedWater,
-        mark: plus18,
-        markValue: true,
-        capacity_1: '330ml',
-        capacity_2: '500ml',
-        capacity_3: '750ml',
-    },
-    {   id: 'BonAquaStillWater',
-        title: 'BonAqua still water',
-        photo: bonAquaStillWater,
-        mark: plus18,
-        markValue: true,
-        capacity_1: '330ml',
-        capacity_2: '500ml',
-        capacity_3: '750ml',
+        option_1: '500ml',
+        price_1: 38,
     },
 ])
+
+export const ProductListTea = ([
+    {
+        id: 'shengPuerDragonEggWithYellowChrysanthemum2016',
+        title: 'Sheng Pu\'er Dragon pearl with yellow chrysanthemum", 2016.',
+        photo: shengPuerDragonEggWithYellowChrysanthemum2016,
+        option_1: '1500ml',
+        option_2: '1000ml',
+        option_3: '500ml',
+        price_1: 55,
+        price_2: 110,
+        price_3: 165, 
+    },
+    {
+        id: 'shengPuerDragonEggWithWhiteChrysanthemum2016',
+        title: 'Sheng Pu\'er Dragon pearl with white chrysanthemum", 2016.',
+        photo: shengPuerDragonEggWithWhiteChrysanthemum2016,
+        option_1: '1500ml',
+        option_2: '1000ml',
+        option_3: '500ml',
+        price_1: 55,
+        price_2: 110,
+        price_3: 165, 
+    },
+    {
+        id: 'shengPuerLollipopFromTheMountainsOfIU',
+        title: 'Sheng Pu\'er Lollipop from the mountains of IU 2016.',
+        photo: shengPuerLollipopFromTheMountainsOfIU,
+        option_1: '1500ml',
+        option_2: '1000ml',
+        option_3: '500ml',
+        price_1: 55,
+        price_2: 110,
+        price_3: 165, 
+    },
+])
+
 
 export const ProductListComboBoxes  = ([
     {id: 'comboBox', 
     title: 'Combo-box',
     photo: comboBox,
-    option: 'Standard'
+    option: 'Standard',
+    price_1: 319,
+
     },
     {id: 'comboBoxFries', 
     title: 'Combo-box Fries',
     photo: comboBoxFries,
     option: 'Standard',
+    price_1: 319,
+
     },
     {id: 'largePotatoBox', 
     title: 'Large Potato Box',
     photo: largePotatoBox,
     option: 'Standard',
+    price_1: 315,
+
     },
     {id: 'setOfSauces', 
     title: 'Set of sauces (garlic, spicy, barbecue, marinara)',
     photo: setOfSauces,
-    option: 'DIP'
+    option: 'DIP',
+    price_1: 50,
+
     },
 ]);
 
@@ -296,50 +327,52 @@ export const ProductListBread = ([
         title: 'Bread with pulled beef and onion',
         photo: breadWithPulledBeefAndOnion,
         option: 'standard',
-        mark: chili,
-        markValue: true,
+        price_1: 129,
+
     },
     {
         id: 'breadWithHamAndMushrooms',
         title: 'Bread with ham and mushrooms',
         photo: breadWithHamAndMushrooms,
         option: 'standard',
-        mark: chili,
-        markValue: true,        
+        price_1: 129,
     },
     {
         id: 'breadWithPepperoniMunichSausagesAndMustard',
         title: 'Bread with pepperoni, munich sausages and mustard',
         photo: breadWithPepperoniMunichSausagesAndMustard,
         option: 'standard',
-        mark: chili,
-        markValue: true,
+        price_1: 129,
     },
     {
         id: 'breadWithBavarianSausagesAndTomatoes',
         title: 'Bread with bavarian sausages and tomatoes',
         photo: breadWithBavarianSausagesAndTomatoes,
         option: 'standard',
-        mark: chili,
-        markValue: true,
+        price_1: 129,
     },
     {
         id: 'breadWithSpinachAndFeta',
         title: 'Bread with spinach and feta',
         photo: breadWithSpinachAndFeta,
         option: 'standard',
+        price_1: 129,
     },
     {
         id: 'breadWithBaconAndJalapenos',
         title: 'Bread with bacon and jalapenos',
         photo: breadWithBaconAndJalapenos,
         option: 'standard',
+        mark: chili,
+        markValue: true,
+        price_1: 129,
     },
     {
         id: 'cheeseBread',
         title: 'Сheese bread',
         photo: cheeseBread,
         option: 'standard',
+        price_1: 110,
     },
     {
         id: 'parmesanBites',
@@ -347,6 +380,8 @@ export const ProductListBread = ([
         photo: parmesanBites,
         option: 'Double',
         optionSecond: 'Standard',
+        price_1: 99,
+        price_2: 130,
     },
 ])
 

@@ -44,10 +44,10 @@ const ProductDrinks = ({product}) => {
                             { product.option === 'Double' ?
                             
                                 <div className={classes.productBlockDetailsCol}>
-                                    <button onClick={() => setIsCapacity('Standard')} 
-                                    className={isCapacity === 'Standard' ? classes.productBtnActive : classes.productBtn}>Standard</button>
-                                    <button onClick={() => setIsCapacity('Double')} 
-                                    className={isCapacity === 'Double' ? classes.productBtnActive : classes.productBtn}>Double</button>
+                                    <button onClick={() => setIsCapacity('standard')} 
+                                    className={isCapacity === 'standard' ? classes.productBtnActive : classes.productBtn}>Standard</button>
+                                    <button onClick={() => setIsCapacity('double')} 
+                                    className={isCapacity === 'double' ? classes.productBtnActive : classes.productBtn}>Double</button>
                                 </div>
                                 :
                                 <button className={classes.productBtnActiveSolo}>{product.option}</button>
@@ -58,7 +58,26 @@ const ProductDrinks = ({product}) => {
                             <div className={classes.productBlockPriceRow}>
                             <div className={classes.productBlockPriceBlock}>
                                 <div className={classes.productPrice}>
-                                   30
+                                    {product.price_1 === true 
+                                    ?
+                                        <div>
+                                            {product.price_1}
+                                        </div>
+                                    :
+                                        <div>
+                                            {(() => {
+                                                if (isCapacity === 'standard') {
+                                                    return(
+                                                        (product.price_1)
+                                                    ) 
+                                                } else if (isCapacity === 'double') {
+                                                    return(
+                                                        (product.price_2)
+                                                    )
+                                                }
+                                            })()}
+                                        </div>
+                                    }
                                 </div>
                                 <div>uah</div>
                             </div>

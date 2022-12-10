@@ -1,9 +1,10 @@
 import React from "react";
 import classes from './ProductListDrinks.module.css';
-import { ProductListWater } from '../../Data/Data'
+import { ProductListWater } from '../../Data/Data';
+import { ProductListTea } from '../../Data/Data'
 import ProductDrinks from '../ProductDrinks/ProductDrinks'
 
-const ProductListDrinks = ({ title }) => {
+const ProductListDrinks = ({ title, titleSecond}) => {
 
     
 
@@ -24,19 +25,19 @@ const ProductListDrinks = ({ title }) => {
                 )} 
             </div>
             
-            {/* <div className={classes.productListTitle}>
+            <div className={classes.productListTitle}>
                 <div>{titleSecond}</div>
                 <div className={classes.productListTitleInfo}>
                     <i class="fa-solid fa-circle-exclamation"></i>
                 </div>
             </div>
             <div className={classes.containerProductList}>
-               {productListPizzaHeroes.map(product => 
+               {ProductListTea.map(product => 
                     <div key={product.id}>
-                        <ProductBlock product={product}/>
+                        <ProductDrinks product={product}/>
                     </div>
                 )}
-            </div> */}
+            </div>
             
         </div>
     );
