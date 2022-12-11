@@ -4,7 +4,7 @@ import classes from './ProductDessert.module.css';
 
 const ProductDessert = ({product}) => {
 
-    const [isCapacity, setIsCapacity] = useState('Standard')
+    const [isCapacity, setIsCapacity] = useState('standard')
 
     const [isCount, setIsCount] = useState(0)
     function increase () {
@@ -31,13 +31,13 @@ const ProductDessert = ({product}) => {
                     </div>
                     <div className={classes.productDescription}>
                         <div className={classes.productBlockDetails}>
-                            { product.option === 'Double' ?
+                            { product.option === 'double' ?
                             
                                 <div className={classes.productBlockDetailsCol}>
-                                    <button onClick={() => setIsCapacity('Standard')} 
-                                    className={isCapacity === 'Standard' ? classes.productBtnActive : classes.productBtn}>Standard</button>
-                                    <button onClick={() => setIsCapacity('Double')} 
-                                    className={isCapacity === 'Double' ? classes.productBtnActive : classes.productBtn}>Double</button>
+                                    <button onClick={() => setIsCapacity('standard')} 
+                                    className={isCapacity === 'standard' ? classes.productBtnActive : classes.productBtn}>Standard</button>
+                                    <button onClick={() => setIsCapacity('double')} 
+                                    className={isCapacity === 'double' ? classes.productBtnActive : classes.productBtn}>Double</button>
                                 </div>
                                 :
                                 <button className={classes.productBtnActiveSolo}>{product.option}</button>
@@ -48,8 +48,25 @@ const ProductDessert = ({product}) => {
                             <div className={classes.productBlockPriceRow}>
                             <div className={classes.productBlockPriceBlock}>
                                 <div className={classes.productPrice}>
-                                   30
-                                </div>
+                                    {product.option === 'double' 
+                                        ?
+                                        <div>
+                                            {(() => {
+                                            if (isCapacity === 'standard') {
+                                                return(
+                                                    (product.price_1)
+                                                ) 
+                                            } else if (isCapacity === 'double') {
+                                                return(
+                                                    (product.price_2)
+                                                )
+                                            }
+                                            })()}
+                                        </div>
+                                        :
+                                        <div>{product.price_1}</div>      
+                                    }       
+                                </div>                   
                                 <div>uah</div>
                             </div>
                             {
