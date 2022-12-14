@@ -8,14 +8,10 @@ const ProductList = ({ title, titleSecond, navBarActive }) => {
 
     const [sortWindowActive, setSortWindowActive] = React.useState(false)
 
-    
-
     const sortWindow = () => {
         setSortWindowActive((active) => !active)
-    } 
-    React.useEffect(() => {
-        console.log(sortWindowActive)
-    },  [sortWindowActive])
+    }
+
 
 
     let [sortingActive, setSortingActive] = React.useState(false)
@@ -30,18 +26,7 @@ const ProductList = ({ title, titleSecond, navBarActive }) => {
         console.log('high to low, ', sortingActive)
     }
     
-    const sortList = () => {
-        setSortingActive((active) => !active)
-        if (sortingActive === true) {
-            console.log('sorting high-low')
-        }  else {
-            console.log('sorting low-high')
-        }                                           
-    }
   
- 
-
-
 
     return(
         <div>

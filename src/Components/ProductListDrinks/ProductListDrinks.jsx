@@ -12,7 +12,7 @@ const ProductListDrinks = ({ title, titleSecond}) => {
         setSortWindowActive((active) => !active)
     } 
 
-    let [sortingActive, setSortingActive] = React.useState(false)
+    const [sortingActive, setSortingActive] = React.useState(false)
 
     function sortWindowLowToHigh() {
         setSortingActive(sortingActive = false)
@@ -44,33 +44,47 @@ const ProductListDrinks = ({ title, titleSecond}) => {
                     <i class="fa-solid fa-circle-exclamation"></i>
                 </div>
             </div>
-           <div className={classes.containerProductList}>
                 { sortingActive ?
 
-                    <div>
-                        {ProductListWater.sort((a, b) => (a.price_1 > b.price_1) ? -1 : 1).map(product => 
-                            <div key={product.id}>
-                                <ProductDrinks product={product}/>
-                            </div>
-                        )} 
-                    </div>
-                    :
-                    <div>
-                        {ProductListWater.sort((a, b) => (a.price_1 > b.price_1) ? 1 : -1).map(product => 
-                            <div key={product.id}>
-                                <ProductDrinks product={product}/>
-                            </div>
-                        )} 
-                    </div>
-                    
+                    <div className={classes.containerProductList}>
+                        <div>
+                            {ProductListWater.sort((a, b) => (a.price_1 > b.price_1) ? -1 : 1).map(product => 
+                                <div key={product.id}>
+                                    <ProductDrinks product={product}/>
+                                </div>
+                            )} 
+                        </div>
+                    </div>                    
+                    :   
+                    <div className={classes.containerProductList}>
+                        <div>
+                            {ProductListWater.sort((a, b) => (a.price_1 > b.price_1) ? 1 : -1).map(product => 
+                                <div key={product.id}>
+                                    <ProductDrinks product={product}/>
+                                </div>
+                            )} 
+                        </div>
+                    </div>   
+
                 }
-                {/* {ProductListWater.sort((a, b) => (a.price_1 > b.price_1) ? -1 : 1).map(product => 
+      
+           {/* <div className={classes.containerProductList}>
+                <div>
+                    {ProductListWater.sort((a, b) => (a.price_1 > b.price_1) ? -1 : 1).map(product => 
+                        <div key={product.id}>
+                            <ProductDrinks product={product}/>
+                        </div>
+                    )} 
+                </div>
+            </div> */}
+
+            {/* {ProductListWater.sort((a, b) => (a.price_1 > b.price_1) ? -1 : 1).map(product => 
                     <div key={product.id}>
                         <ProductDrinks product={product}/>
                     </div>
                 )}  */}
-            </div>
-            
+
+      
             <div className={classes.productListTitle}>
                 <div>{titleSecond}</div>
                 <div className={classes.productListTitleInfo}>
