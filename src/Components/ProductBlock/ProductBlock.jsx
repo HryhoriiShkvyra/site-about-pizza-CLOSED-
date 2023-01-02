@@ -1,24 +1,28 @@
 import React, { useState } from "react";
 import classes from './ProductBlock.module.css';
 import PizzaManhattan from '../../Assets/pizza/card/Pizza Manhattan.png';
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartReducer";
 
 
 const ProductBlock = ({ product }) => {
 
     const [isSize, setIsSize] = useState('standard')
     const [isCrust, setIsCrust] = useState('thick')
-    const SizeValue = [isSize, isCrust]
+    const SizeValue = [isSize, isCrust] 
     let isPrice = '0'   
 
     const [count, setCount] = useState(0)
-    function increase() {
-        setCount(count + 1)
-        console.log('count + 1');
-    };
-    function decrease() {
-        setCount(count - 1)
-        console.log('count - 1');
-    };
+    // function increase() {
+    //     setCount(count + 1)
+    //     console.log('count + 1');
+    // };
+    // function decrease() {
+    //     setCount(count - 1)
+    //     console.log('count - 1');
+    // };
+
+    const dispatch = useDispatch();
 
     // isSize = ProductBlockDetailsCol.isSize;
 
@@ -136,21 +140,21 @@ const ProductBlock = ({ product }) => {
                             </div>
                             {
                                 count === 0 ?
-                                    <button onClick={increase} className={classes.productBlockWrap}>To cart</button>
+                                    <button onClick={() => dispatch(addToCart())} className={classes.productBlockWrap}>To cart</button>
                                       
                                 :
                                 <div className={classes.increaseDecreaseBtns}>
                                     <div className={classes.decreaseBtn}>
-                                        <button className={classes.decrease} onClick={decrease}>
+                                        <button className={classes.decrease} onClick={() => dispatch(addToCart())}>
                                             <i class="fa-solid fa-minus"></i>
                                         </button>
                                     </div>
                                     
                                     <div className={classes.count}>
-                                        {count}
+                                        {count} 
                                     </div>
                                     <div className={classes.increaseBtn}>
-                                        <button className={classes.increase} onClick={increase}>
+                                        <button className={classes.increase} onClick={() => dispatch(addToCart())}>
                                             <i class="fa-solid fa-plus"></i>
                                         </button>
                                     </div>

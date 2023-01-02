@@ -13,6 +13,8 @@ import Checkout from "../Checkout/Checkout";
 import classes from './Index.module.css'
 import { SideMenu } from "../../Components/SideMenu/SideMenu";
 
+import { CartCount } from "../../Helper/Context";
+
 export const Index = () => {
 
 
@@ -30,12 +32,15 @@ export const Index = () => {
     const [navBarActive, setNavBarActive] = useState('#')
 
     
-    const [isItemsCount, setIsItemsCount] = useState(0)
+    const [isItemsCount, setIsItemsCount] = useState(1)
+
+    const [cartCount, setCartCount] = useState(0)
 
     return(
         <div>
             <Header/>
             <div className={classes.menu}>
+            <CartCount.Provider value={{cartCount, setCartCount}}></CartCount.Provider>
                 
                     <Router>
                         <div className={classes.navBarBlock}>

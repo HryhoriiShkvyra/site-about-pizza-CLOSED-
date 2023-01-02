@@ -1,0 +1,143 @@
+.checkout {
+    width: 1338px;
+    display: grid;
+    grid-template-columns: 712px 526px;
+    gap: 25px;
+    margin: 20px auto 0;
+}
+
+.checkoutOrder {
+    border: 1px solid;
+}
+
+.yourOrder {
+
+
+    border-radius: 20px;
+}
+
+.categoryTitle {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cardItemBody {
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid rgb(209, 209, 209);
+}
+
+.cardItemBody {
+
+}
+
+.cardItemAbout {
+    display: grid;
+}
+
+.cardItem {
+    display: grid;
+    grid-template-columns: 42% 63%;
+    width: 530px;
+    height: 140px;
+    padding: 10px;
+
+
+    background-color: white;
+    border-bottom: 1px solid rgb(209, 209, 209);
+}
+
+.cardPhoto {
+    width: 193px;
+    height: 120px;
+    border-radius: 18px;
+}
+
+.cardItemTitle {
+    font-size: 13px;
+}
+
+.cardItemIngredients {
+    width: 90%;
+    color: #333;
+    margin-top: 5px;
+    font-size: 11px;
+}
+
+.cardItemSize {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.cardItemPrice {
+    font-weight: 700;
+}
+
+.cardItemQuantity {
+    display: flex;
+    width: 90px;
+    position: relative;
+    bottom: 20px;
+    left: 205px;
+
+    color: white;
+
+    border-radius: 30px;
+
+    background-color: #e31837;
+}
+
+.cardItemQuantityBtn {
+    width: 30px;
+    height: 30px;
+
+    color: white;
+
+    border: 1px solid rgba(189, 45, 45, 0.392);
+    border-radius: 30px;
+    background-color: rgba(250, 250, 250, 0);
+}
+
+.cardItemQuantityCount {
+    width: 30px;
+    text-align: center;
+}
+
+.cardItemRemove {
+    position: relative;
+    left: 265px;
+    bottom: 140px;
+
+    
+}
+
+.cardItemRemoveBtn {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border: 1px solid rgb(210, 208, 208);
+    border-radius: 30px;
+
+    transform: rotate(45deg);
+}
+
+
+
+
+.cardItemFooter {
+    padding: 8px 0;
+
+    background-color: white;
+}
+
+.FinalPrice {
+    position: relative;
+    left: 400px;
+
+
+    font-size: 17px;
+    font-weight: 700;
+
+    background-color: white;
+}

@@ -1,16 +1,17 @@
 import React from "react";
 import ProductBlock from "../ProductBlock/ProductBlock";
 import classes from './ProductList.module.css';
-import { productListPizzaBestPrice } from '../../Data/Data';
+import { productListPizzaBestPrice } from '../../Data/Data'
 import { productListPizzaHeroes } from '../../Data/Data';
 
-const ProductList = ({ title, titleSecond, navBarActive }) => {
+const ProductList = () => {
 
     const [sortWindowActive, setSortWindowActive] = React.useState(false)
-
-    const sortWindow = () => {
+    console.log(sortWindowActive)
+    const sortWindow = React.memo(() => {
         setSortWindowActive((active) => !active)
-    }
+        console.log(sortWindow)
+    }, )
 
 
 
@@ -30,6 +31,7 @@ const ProductList = ({ title, titleSecond, navBarActive }) => {
 
     return(
         <div>
+            <div>
             <div onClick={sortWindow} className={classes.sortBlock}>
                 <div  className={classes.sort}>
                     <div className={classes.sortBtn}>Sort</div>
@@ -45,42 +47,22 @@ const ProductList = ({ title, titleSecond, navBarActive }) => {
                  
 
             <div className={classes.productListTitle}>
-                <div>{title}</div>
+                <div>title</div>
                 <div className={classes.productListTitleInfo}>
                     <i class="fa-solid fa-circle-exclamation"></i>
                 </div>
             </div>
-           
-            
-            {
-                sortingActive ? 
-                <div className={classes.containerProductList}>
-                    {productListPizzaBestPrice.sort((a, b) => (a.price_1 > b.price_1) ? -1 : 1).map(product => 
-                        <div key={product.id}>
-                            {/* {product.id} */}
-                            <ProductBlock product={product}/>
-                        </div>
-                    )}
-                </div>
-                :
-                <div className={classes.containerProductList}>
-                    {productListPizzaBestPrice.sort((a, b) => (a.price_1 > b.price_1) ? 1 : -1).map(product => 
-                        <div key={product.id}>
-                            <ProductBlock product={product}/>
-                        </div>
-                    )}
-                </div>
-            }
-            {/* <div className={classes.containerProductList}>
+
+            <div className={classes.containerProductList}>
                 {productListPizzaBestPrice.map(product => 
                     <div key={product.id}>
                         <ProductBlock product={product}/>
                     </div>
                 )} 
-            </div> */}
-            
+            </div> 
+             
             <div className={classes.productListTitle}>
-                <div>{titleSecond}</div>
+                <div>titleSecond</div>
                 <div className={classes.productListTitleInfo}>
                     <i class="fa-solid fa-circle-exclamation"></i>
                 </div>
@@ -110,7 +92,7 @@ const ProductList = ({ title, titleSecond, navBarActive }) => {
                     )}
                 </div>
             }
-            
+            </div>
         </div>
     );
 };
